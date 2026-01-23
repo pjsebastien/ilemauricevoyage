@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init -y)",
+      "Bash(npm run build:*)",
+      "Bash(test:*)",
+      "Bash(npx next build)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(python3:*)",
+      "Bash(node fetch-wp-media.js:*)",
+      "Bash(taskkill:*)",
+      "Bash(node -e:*)",
+      "Bash(node analyze-activities.js:*)",
+      "Bash(node scripts/generate-activity-pages.js:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx tsc:*)",
+      "Bash(netstat:*)",
+      "Bash(npm install:*)",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}

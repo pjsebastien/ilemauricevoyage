@@ -1,0 +1,472 @@
+[
+  {
+    "slug": "initiation-canyoning-aux-7-cascades-de-tamarin-sur-lile-maurice-8123",
+    "category": "Canyoning",
+    "mainLocation": "Chutes de Tamarin",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "8123"
+    ]
+  },
+  {
+    "slug": "observation-des-cetaces-flic-en-flac-ile-maurice",
+    "category": "Observation des cétacés",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 4,
+    "activityIds": [
+      "9318",
+      "10892",
+      "9320",
+      "16552"
+    ]
+  },
+  {
+    "slug": "randonnee-chutes-de-tamarin-ile-maurice",
+    "category": "Randonnée",
+    "mainLocation": "Chutes de Tamarin",
+    "needsFusion": true,
+    "activitiesCount": 7,
+    "activityIds": [
+      "8179",
+      "4455",
+      "4467",
+      "8185",
+      "8182",
+      "16729",
+      "16723"
+    ]
+  },
+  {
+    "slug": "randonnee-le-morne-ile-maurice",
+    "category": "Randonnée",
+    "mainLocation": "Le Morne",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "4446",
+      "25794",
+      "16724"
+    ]
+  },
+  {
+    "slug": "excursion-en-quad-a-lile-maurice-pres-de-blue-bay-10160",
+    "category": "Quad",
+    "mainLocation": "Blue Bay",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "10160"
+    ]
+  },
+  {
+    "slug": "kayak-flic-en-flac-ile-maurice",
+    "category": "Kayak",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 5,
+    "activityIds": [
+      "13223",
+      "13279",
+      "26026",
+      "26028",
+      "26024"
+    ]
+  },
+  {
+    "slug": "snorkeling-flic-en-flac-ile-maurice",
+    "category": "Snorkeling",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 5,
+    "activityIds": [
+      "9315",
+      "16560",
+      "16550",
+      "16556",
+      "26065"
+    ]
+  },
+  {
+    "slug": "survol-du-lagon-nord-de-lile-maurice-en-hydravion-depuis-belle-mare-17449",
+    "category": "Vols panoramiques",
+    "mainLocation": "Trou d'Eau Douce",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "17449"
+    ]
+  },
+  {
+    "slug": "balade-a-cheval-le-morne-ile-maurice",
+    "category": "Balade à cheval",
+    "mainLocation": "Le Morne",
+    "needsFusion": true,
+    "activitiesCount": 4,
+    "activityIds": [
+      "14243",
+      "14246",
+      "14192",
+      "14248"
+    ]
+  },
+  {
+    "slug": "snorkeling-blue-bay-ile-maurice",
+    "category": "Snorkeling",
+    "mainLocation": "Blue Bay",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "16919",
+      "18463"
+    ]
+  },
+  {
+    "slug": "balade-en-catamaran-flic-en-flac-ile-maurice",
+    "category": "Balade en catamaran",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "14370",
+      "16564"
+    ]
+  },
+  {
+    "slug": "excursion-seabob-a-grand-baie-a-lile-maurice-4845",
+    "category": "Snorkeling",
+    "mainLocation": "Grand Baie",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "4845"
+    ]
+  },
+  {
+    "slug": "balade-en-catamaran-sur-le-lagon-de-lile-aux-cerfs-depuis-trou-deau-douce-ile-14366",
+    "category": "Balade en catamaran",
+    "mainLocation": "Trou d'Eau Douce",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "14366"
+    ]
+  },
+  {
+    "slug": "croisiere-en-catamaran-a-lile-aux-cerfs-depuis-la-pointe-jerome-a-mahebourg-il-14179",
+    "category": "Balade en catamaran",
+    "mainLocation": "Blue Bay",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "14179"
+    ]
+  },
+  {
+    "slug": "plongee-sous-marine-flic-en-flac-ile-maurice",
+    "category": "Plongée sous-marine",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "10341",
+      "10355",
+      "10352"
+    ]
+  },
+  {
+    "slug": "kayak-grand-gaube-ile-dambre-ile-maurice",
+    "category": "Kayak",
+    "mainLocation": "Grand Gaube, Île d'Ambre",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "15216",
+      "15066"
+    ]
+  },
+  {
+    "slug": "excursion-en-quad-au-valle-park-ile-maurice-13820",
+    "category": "Quad",
+    "mainLocation": "Chamouny",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "13820"
+    ]
+  },
+  {
+    "slug": "excursion-en-buggy-a-lile-maurice-pres-de-blue-bay-17696",
+    "category": "Buggy",
+    "mainLocation": "Blue Bay",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "17696"
+    ]
+  },
+  {
+    "slug": "plongee-sous-marine-grand-baie-ile-maurice",
+    "category": "Plongée sous-marine",
+    "mainLocation": "Grand Baie",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "15456",
+      "14990",
+      "6679"
+    ]
+  },
+  {
+    "slug": "kitesurf-le-morne-ile-maurice",
+    "category": "Kitesurf",
+    "mainLocation": "Le Morne",
+    "needsFusion": true,
+    "activitiesCount": 6,
+    "activityIds": [
+      "4884",
+      "5603",
+      "1904",
+      "4889",
+      "2463",
+      "1905"
+    ]
+  },
+  {
+    "slug": "plongee-sous-marine-blue-bay-ile-maurice",
+    "category": "Plongée sous-marine",
+    "mainLocation": "Blue Bay",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "13919",
+      "13925",
+      "13923"
+    ]
+  },
+  {
+    "slug": "tyrolienne-chamouny-ile-maurice",
+    "category": "Tyrolienne",
+    "mainLocation": "Chamouny",
+    "needsFusion": true,
+    "activitiesCount": 5,
+    "activityIds": [
+      "13846",
+      "13850",
+      "13826",
+      "13847",
+      "13843"
+    ]
+  },
+  {
+    "slug": "balade-en-bateau-blue-bay-ile-maurice",
+    "category": "Balade en bateau",
+    "mainLocation": "Blue Bay",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "16777",
+      "23376"
+    ]
+  },
+  {
+    "slug": "nage-avec-les-dauphins-a-lile-maurice-depuis-bel-ombre-1907",
+    "category": "Snorkeling",
+    "mainLocation": "Le Morne",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "1907"
+    ]
+  },
+  {
+    "slug": "balade-a-cheval-flic-en-flac-ile-maurice",
+    "category": "Balade à cheval",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "13299",
+      "13300"
+    ]
+  },
+  {
+    "slug": "excursion-en-kayak-de-mer-a-lile-aux-benitiers-ile-maurice-18022",
+    "category": "Kayak",
+    "mainLocation": "Le Morne",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "18022"
+    ]
+  },
+  {
+    "slug": "excursion-en-buggy-au-valle-park-ile-maurice-13837",
+    "category": "Buggy",
+    "mainLocation": "Chamouny",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "13837"
+    ]
+  },
+  {
+    "slug": "traversee-du-pont-nepalais-du-valle-park-ile-maurice-13828",
+    "category": "Accrobranche",
+    "mainLocation": "Chamouny",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "13828"
+    ]
+  },
+  {
+    "slug": "cours-prive-de-kitesurf-sur-la-plage-danse-la-raie-a-cap-malheureux-ile-mauric-16485",
+    "category": "Kitesurf",
+    "mainLocation": "Cap Malheureux",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "16485"
+    ]
+  },
+  {
+    "slug": "randonnee-chamouny-ile-maurice",
+    "category": "Randonnée",
+    "mainLocation": "Chamouny",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "14444",
+      "13853"
+    ]
+  },
+  {
+    "slug": "descente-en-luge-de-montagne-au-valle-park-ile-maurice-13832",
+    "category": "Luge de montagne",
+    "mainLocation": "Chamouny",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "13832"
+    ]
+  },
+  {
+    "slug": "excursion-a-lile-aux-aigrettes-plage-de-gris-gris-et-du-sud-est-de-lile-mauri-13212",
+    "category": "Randonnée",
+    "mainLocation": "Blue Bay",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "13212"
+    ]
+  },
+  {
+    "slug": "randonnee-au-pouce-pres-de-port-louis-sur-lile-maurice-8187",
+    "category": "Randonnée",
+    "mainLocation": "Port-Louis, Maurice",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "8187"
+    ]
+  },
+  {
+    "slug": "4x4-jeep-chamouny-ile-maurice",
+    "category": "4x4 / Jeep",
+    "mainLocation": "Chamouny",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "13836",
+      "13841"
+    ]
+  },
+  {
+    "slug": "balade-a-cheval-souillac-ile-maurice-ile-maurice",
+    "category": "Balade à cheval",
+    "mainLocation": "Souillac, Île Maurice",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "25709",
+      "25707",
+      "25710"
+    ]
+  },
+  {
+    "slug": "plongee-sous-marine-trou-deau-douce-ile-maurice",
+    "category": "Plongée sous-marine",
+    "mainLocation": "Trou d'Eau Douce",
+    "needsFusion": true,
+    "activitiesCount": 3,
+    "activityIds": [
+      "25464",
+      "25460",
+      "25462"
+    ]
+  },
+  {
+    "slug": "randonnee-souillac-ile-maurice-ile-maurice",
+    "category": "Randonnée",
+    "mainLocation": "Souillac, Île Maurice",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "16728",
+      "16726"
+    ]
+  },
+  {
+    "slug": "location-de-vtt-a-grand-gaube-ile-maurice-15465",
+    "category": "VTT",
+    "mainLocation": "Grand Gaube, Île d'Ambre",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "15465"
+    ]
+  },
+  {
+    "slug": "balade-en-bateau-trou-deau-douce-ile-maurice",
+    "category": "Balade en bateau",
+    "mainLocation": "Trou d'Eau Douce",
+    "needsFusion": true,
+    "activitiesCount": 2,
+    "activityIds": [
+      "14402",
+      "14372"
+    ]
+  },
+  {
+    "slug": "excursion-de-snorkeling-au-coin-de-mire-a-lile-plate-et-a-lilot-gabriel-depui-26097",
+    "category": "Snorkeling",
+    "mainLocation": "Cap Malheureux",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "26097"
+    ]
+  },
+  {
+    "slug": "excursion-a-vtt-a-chamouny-dans-le-bike-park-naturel-mobike-ile-maurice-25539",
+    "category": "VTT",
+    "mainLocation": "Chamouny",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "25539"
+    ]
+  },
+  {
+    "slug": "croisiere-en-speed-boat-au-coucher-du-soleil-depuis-riviere-noire-ile-maurice-16559",
+    "category": "Balade en bateau",
+    "mainLocation": "Flic en Flac",
+    "needsFusion": false,
+    "activitiesCount": 1,
+    "activityIds": [
+      "16559"
+    ]
+  }
+]

@@ -44,4 +44,54 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* 404 Page Animations */
+  @keyframes wave-404 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes float-404 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes boat-404 {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+  }
+
+  @keyframes pulse-slow-404 {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(0.98); }
+  }
+
+  .animate-wave-404 {
+    animation: wave-404 15s linear infinite;
+  }
+
+  .animate-wave-404-slow {
+    animation: wave-404 20s linear infinite;
+  }
+
+  .animate-wave-404-fast {
+    animation: wave-404 10s linear infinite;
+  }
+
+  .animate-float-404 {
+    animation: float-404 6s ease-in-out infinite;
+  }
+
+  .animate-float-404-delayed {
+    animation: float-404 6s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  .animate-boat-404 {
+    animation: boat-404 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow-404 {
+    animation: pulse-slow-404 4s ease-in-out infinite;
+  }
 }

@@ -23,7 +23,8 @@
       "Bash(npm run lint)",
       "Bash(dir:*)",
       "Bash(tee:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(NODE_ENV=production node:*)"
     ]
   }
 }

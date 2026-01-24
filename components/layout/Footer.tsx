@@ -20,6 +20,7 @@ export default function Footer() {
       links: [
         { name: 'Organiser son voyage', href: '/#organiser' },
         { name: 'Conseils pratiques', href: '/#conseils' },
+        { name: 'Contact', href: '/contact' },
       ],
     },
   ];
@@ -59,8 +60,21 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Copyright */}
+        {/* Copyright & Legal */}
         <div className="pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
+            <Link href="/mentions-legales" className="hover:text-white transition-colors">
+              Mentions légales
+            </Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">
+              Politique de confidentialité
+            </Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/contact" className="hover:text-white transition-colors">
+              Contact
+            </Link>
+          </div>
           <p>© {currentYear} Île Maurice Voyage. Tous droits réservés.</p>
         </div>
       </div>

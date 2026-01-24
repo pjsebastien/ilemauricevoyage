@@ -55,6 +55,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/politique-de-confidentialite`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
   ];
 
   // Pages destinations "Que faire à..."

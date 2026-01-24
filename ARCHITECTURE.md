@@ -109,7 +109,7 @@ CTA "Voir toutes les activités" (NextStepCTA)
 - **CTA évident** : L'utilisateur sait quelle est la prochaine étape
 
 **Choix SEO** :
-- Title : "Organiser votre voyage à l'Île Maurice | Guide complet"
+- Title : "Organiser votre voyage à l'Île Maurice"
 - H1 : "Organisez votre voyage à l'Île Maurice en toute simplicité"
 - Contenu structuré (H2, H3) pour les étapes
 - Maillage interne vers /activites-ile-maurice
@@ -236,7 +236,7 @@ Conseils pratiques (3 × InfoBox)
 **Pas de dates** :
 - ❌ "Guide 2026"
 - ❌ "Meilleures activités en janvier"
-- ✅ "Guide complet"
+- ✅ "Dossier complet"
 - ✅ "Activités incontournables"
 
 **Pourquoi** :

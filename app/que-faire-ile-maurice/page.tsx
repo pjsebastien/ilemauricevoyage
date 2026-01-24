@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllLocationSlugs, getLocationBySlug } from '@/lib/locations-data-enriched';
+import type { LocationDataEnriched } from '@/lib/locations-data-enriched';
+
 
 export const metadata: Metadata = {
   title: 'Que faire à l\'Île Maurice ? Activités incontournables et destinations',
@@ -63,11 +65,14 @@ export default function QueFairePage() {
     }
   };
 
-  const getLocationsByRegion = (slugs: string[]) => {
-    return slugs
-      .map(slug => locations.find(loc => loc?.slug === slug))
-      .filter(Boolean);
-  };
+const getLocationsByRegion = (slugs: string[]) => {
+  return slugs
+    .map(slug => locations.find(loc => loc?.slug === slug))
+    .filter(
+      (loc): loc is LocationDataEnriched => loc !== undefined
+    );
+};
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -146,7 +151,7 @@ export default function QueFairePage() {
             Située dans l'océan Indien, à 900 km à l'est de Madagascar, l'Île Maurice offre une <strong>diversité de paysages exceptionnelle</strong> sur seulement 1 865 km². Des lagons cristallins aux forêts tropicales d'altitude, des villages de pêcheurs aux marchés animés de Port-Louis, chaque coin de l'île raconte une histoire différente.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Dans ce guide complet, nous avons rassemblé <strong>toutes les activités et destinations incontournables</strong> de Maurice, organisées par thématique et par région. Pour chaque lieu, vous trouverez nos conseils détaillés avec hébergements, restaurants, meilleurs mois pour visiter et budget.
+            Dans ce dossier complet, nous avons rassemblé <strong>toutes les activités et destinations incontournables</strong> de Maurice, organisées par thématique et par région. Pour chaque lieu, vous trouverez nos conseils détaillés avec hébergements, restaurants, meilleurs mois pour visiter et budget.
           </p>
         </div>
       </article>
@@ -286,7 +291,7 @@ export default function QueFairePage() {
             <h3 className="text-xl font-bold text-gray-900 mb-4">🏄 Autres activités nautiques à Maurice</h3>
             <div className="grid md:grid-cols-2 gap-4 text-gray-700">
               <ul className="space-y-2">
-                <li>• <strong>Snorkeling</strong> : <Link href="/que-faire-blue-bay" className="text-blue-600 hover:underline">Blue Bay</Link> (parc marin), <Link href="/que-faire-trou-aux-biches" className="text-blue-600 hover:underline">Trou aux Biches</Link> (tortues)</li>
+                <li>• <strong>Snorkeling</strong> : <Link href="/blue-bay-ile-maurice" className="text-blue-600 hover:underline">Blue Bay</Link> (parc marin), <Link href="/que-faire-trou-aux-biches" className="text-blue-600 hover:underline">Trou aux Biches</Link> (tortues)</li>
                 <li>• <strong>Surf</strong> : <Link href="/que-faire-tamarin" className="text-blue-600 hover:underline">Tamarin</Link> (vagues mythiques, niveau intermédiaire)</li>
                 <li>• <strong>Kayak</strong> : <Link href="/que-faire-ile-aux-cerfs" className="text-blue-600 hover:underline">Île aux Cerfs</Link>, mangroves de la côte est</li>
               </ul>
@@ -550,7 +555,7 @@ export default function QueFairePage() {
                 <strong>Mai-juin</strong> et <strong>septembre-octobre</strong> = idéal. Météo parfaite, moins de monde. Évitez janvier-mars (cyclones) si possible.
               </p>
               <Link href="/quand-partir-ile-maurice" className="text-blue-600 text-sm font-medium hover:underline mt-2 block">
-                Guide complet →
+                Dossier complet →
               </Link>
             </div>
 

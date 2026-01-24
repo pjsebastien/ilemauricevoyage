@@ -127,7 +127,7 @@ export default function LocationPageEnriched({ location }: LocationPageEnrichedP
       {/* Table of Contents */}
       <div className="bg-blue-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">📋 Guide complet</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">📋 Vue d'ensemble</h2>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <a href="#que-faire" className="text-blue-600 hover:underline">Que faire</a>
             <span className="text-gray-400">•</span>
@@ -193,7 +193,7 @@ export default function LocationPageEnriched({ location }: LocationPageEnrichedP
                     key={activity.id}
                     href={activity.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all group"
                   >
                     <div className="relative h-48">

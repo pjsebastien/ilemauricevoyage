@@ -83,7 +83,7 @@ import PageHero from '@/components/layout/PageHero';
 <PageHero
   variant="ocean"              // gradient | ocean | sunset | tropical
   size="large"                 // default | large
-  badge={{ label: "Guide complet", variant: "info" }}
+  badge={{ label: "Dossier complet", variant: "info" }}
   title="Titre principal"
   subtitle="Description du hero"
   stats={[

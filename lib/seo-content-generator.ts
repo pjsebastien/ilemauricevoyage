@@ -152,8 +152,8 @@ export function generateFusionIntro(group: ActivityGroup): string {
       intro += `Savoir nager est requis. `;
     }
 
-    if (activity.details.languages && activity.details.languages.length > 0) {
-      intro += `Guidage en ${activity.details.languages.join(', ')}. `;
+    if (activity.details.spokenLanguages && activity.details.spokenLanguages.length > 0) {
+      intro += `Guidage en ${activity.details.spokenLanguages.join(', ')}. `;
     }
 
     // Indication de prix avec contexte
@@ -389,8 +389,8 @@ export function generateIndividualIntro(activity: Activity): string {
     intro += `**Poids maximum:** ${enriched.requirements.maxWeight} kg\n`;
   }
 
-  if (details.languages && details.languages.length > 0) {
-    intro += `**Langues:** ${details.languages.join(', ')}\n`;
+  if (details.spokenLanguages && details.spokenLanguages.length > 0) {
+    intro += `**Langues:** ${details.spokenLanguages.join(', ')}\n`;
   }
 
   intro += `\n`;
@@ -432,8 +432,7 @@ export function generateWhyChoose(activity: Activity): string {
 
   // Analyser les atouts spécifiques de l'activité
   const hasGoodRating = rating && rating >= 4.5 && reviewCount >= 10;
-  const isSmallGroup = details.maxPax && details.maxPax <= 8;
-  const multiLanguage = details.languages && details.languages.length >= 3;
+  const multiLanguage = details.spokenLanguages && details.spokenLanguages.length >= 3;
 
   // Section 1: Les points forts du site
   content += `### Un site naturel d'exception\n\n`;
@@ -473,9 +472,9 @@ export function generateWhyChoose(activity: Activity): string {
   }
 
   if (multiLanguage) {
-    content += `L'équipe polyglotte (${details.languages.join(', ')}) facilite les échanges et vous permet de profiter pleinement des explications et anecdotes. `;
-  } else if (details.languages && details.languages.length > 0) {
-    content += `Les guides s'expriment en ${details.languages.join(' et ')}, assurant une communication fluide. `;
+    content += `L'équipe polyglotte (${details.spokenLanguages.join(', ')}) facilite les échanges et vous permet de profiter pleinement des explications et anecdotes. `;
+  } else if (details.spokenLanguages && details.spokenLanguages.length > 0) {
+    content += `Les guides s'expriment en ${details.spokenLanguages.join(' et ')}, assurant une communication fluide. `;
   }
 
   content += '\n\n';
@@ -515,10 +514,6 @@ export function generateWhyChoose(activity: Activity): string {
 
   if (enriched?.requirements?.maxWeight) {
     content += `Poids maximum autorisé: ${enriched.requirements.maxWeight} kg (contraintes du matériel de sécurité). `;
-  }
-
-  if (isSmallGroup) {
-    content += `Le nombre réduit de participants (maximum ${details.maxPax} personnes) garantit un encadrement personnalisé et une ambiance conviviale. `;
   }
 
   content += '\n\n';

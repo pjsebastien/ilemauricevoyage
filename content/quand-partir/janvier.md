@@ -1,6 +1,6 @@
 ---
 title: "Île Maurice en Janvier : Météo, Prix et Activités"
-metaTitle: "Île Maurice en janvier : météo, prix et activités | Guide complet"
+metaTitle: "Île Maurice en janvier : météo, prix et activités"
 metaDescription: "Janvier à Maurice : chaleur tropicale et plages paradisiaques mais risque cyclonique. Notre avis d'expert, météo détaillée, budget et meilleures activités."
 month: "janvier"
 season: "été austral"
@@ -10,7 +10,7 @@ season: "été austral"
 
 Janvier marque le cœur de l'été austral à l'Île Maurice. Les températures frôlent les 30°C, le lagon affiche un bleu éclatant et l'eau atteint 27°C. C'est la période des grandes vacances pour les Mauriciens et de nombreux touristes européens fuient l'hiver. Mais voilà : janvier, c'est aussi la saison des pluies et le risque cyclonique est bien réel.
 
-**Alors, janvier est-il le bon moment pour découvrir Maurice ?** Notre réponse nuancée dans ce guide complet avec tous les détails sur la météo, les prix, les activités adaptées et nos meilleurs conseils.
+**Alors, janvier est-il le bon moment pour découvrir Maurice ?** Notre réponse nuancée dans ce dossier complet avec tous les détails sur la météo, les prix, les activités adaptées et nos meilleurs conseils.
 
 ## 📊 Janvier à Maurice en résumé
 
@@ -610,7 +610,7 @@ Janvier à l'Île Maurice est un **mois contrasté** qui plaira aux vacanciers f
 
 Consultez nos guides détaillés :
 - [Toutes nos activités à l'Île Maurice](/activites-ile-maurice)
-- [Guide complet Quand partir à Maurice](/quand-partir-ile-maurice)
+- [Dossier complet Quand partir à Maurice](/quand-partir-ile-maurice)
 - [Les plus belles plages de l'île](/plages-ile-maurice)
 
 Bon voyage sous le soleil mauricien ! 🌴☀️

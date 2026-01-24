@@ -105,8 +105,10 @@ export function sortActivities(
 
     case 'rating':
       return sorted.sort((a, b) => {
-        if (a.rating !== b.rating) {
-          return b.rating - a.rating;
+        const ratingA = a.rating ?? 0;
+        const ratingB = b.rating ?? 0;
+        if (ratingA !== ratingB) {
+          return ratingB - ratingA;
         }
         return b.reviewCount - a.reviewCount;
       });

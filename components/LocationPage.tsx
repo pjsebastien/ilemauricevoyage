@@ -147,7 +147,7 @@ export default function LocationPage({ location }: LocationPageProps) {
                       key={activity.id}
                       href={activity.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group"
                     >
                       <div className="relative h-48">

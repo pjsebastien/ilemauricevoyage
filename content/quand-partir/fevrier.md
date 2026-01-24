@@ -321,5 +321,5 @@ Février est un **mois ambivalent** qui séduira les voyageurs **flexibles, aven
 
 Consultez nos guides complémentaires :
 - [Toutes nos activités à l'Île Maurice](/activites-ile-maurice)
-- [Guide complet Quand partir à Maurice](/quand-partir-ile-maurice)
+- [Dossier complet Quand partir à Maurice](/quand-partir-ile-maurice)
 - [Mars à Maurice : le mois d'après](/maurice-en-mars)

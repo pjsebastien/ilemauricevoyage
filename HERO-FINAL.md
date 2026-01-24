@@ -18,7 +18,7 @@ Le hero a été complètement refait dans un style **épuré et professionnel** 
 ```tsx
 <PageHero
   size="large"                          // default | large
-  badge="Guide complet"                 // Optionnel
+  badge="Dossier complet"                 // Optionnel
   title="Titre principal"               // Requis
   subtitle="Description"                // Optionnel
   backgroundImage="https://..."         // Optionnel - Image de fond subtile
@@ -77,7 +77,7 @@ backgroundImage="https://blog.ilemauricevoyage.fr/wp-content/uploads/..."
 ```tsx
 <PageHero
   size="large"
-  badge="Guide complet"
+  badge="Dossier complet"
   title="Organisez votre voyage à l'Île Maurice"
   subtitle="Un guide étape par étape..."
   backgroundImage="https://images.unsplash.com/photo-1589394637989-9f1b6e278d0e"

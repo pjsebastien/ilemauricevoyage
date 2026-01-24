@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 interface CardProps {
   children: ReactNode;
@@ -8,6 +8,7 @@ interface CardProps {
   hover?: boolean;
   border?: boolean;
   shadow?: 'none' | 'sm' | 'md' | 'lg';
+  style?: CSSProperties;
 }
 
 /**
@@ -21,6 +22,7 @@ export default function Card({
   hover = false,
   border = true,
   shadow = 'md',
+  style,
 }: CardProps) {
   const paddingStyles = {
     none: '',
@@ -46,6 +48,7 @@ export default function Card({
         hover && 'transition-shadow hover:shadow-xl',
         className
       )}
+      style={style}
     >
       {children}
     </div>

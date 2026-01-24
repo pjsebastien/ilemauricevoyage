@@ -118,7 +118,7 @@ SVG animé en bas du hero pour transition douce vers le contenu
 <PageHero
   variant="tropical"
   size="large"
-  badge={{ label: "Guide complet", variant: "info" }}
+  badge={{ label: "Dossier complet", variant: "info" }}
   title="Organisez votre voyage à l'Île Maurice"
   subtitle="..."
   stats={[
@@ -248,7 +248,7 @@ badge="Voyage de noces"
 ### Vue d'ensemble
 ```
 variant="gradient"
-badge="Guide complet"
+badge="Dossier complet"
 ```
 
 ---

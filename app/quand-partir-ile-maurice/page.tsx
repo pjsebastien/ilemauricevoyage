@@ -15,18 +15,18 @@ export const metadata: Metadata = {
 
 export default function QuandPartirPage() {
   const monthsGrid = [
-    { slug: 'janvier', rating: 3, color: 'orange', season: 'Été austral', temp: '30°C', price: '€€€' },
-    { slug: 'fevrier', rating: 2.5, color: 'red', season: 'Été austral', temp: '31°C', price: '€€' },
-    { slug: 'mars', rating: 3.5, color: 'yellow', season: 'Été austral', temp: '30°C', price: '€€' },
-    { slug: 'avril', rating: 4.5, color: 'green', season: 'Automne austral', temp: '28°C', price: '€€' },
-    { slug: 'mai', rating: 5, color: 'green', season: 'Automne austral', temp: '26°C', price: '€€' },
-    { slug: 'juin', rating: 4.5, color: 'green', season: 'Hiver austral', temp: '24°C', price: '€€' },
-    { slug: 'juillet', rating: 4, color: 'yellow', season: 'Hiver austral', temp: '23°C', price: '€€€' },
-    { slug: 'aout', rating: 3.5, color: 'yellow', season: 'Hiver austral', temp: '23°C', price: '€€€€' },
-    { slug: 'septembre', rating: 5, color: 'green', season: 'Printemps austral', temp: '25°C', price: '€€' },
-    { slug: 'octobre', rating: 5, color: 'green', season: 'Printemps austral', temp: '26°C', price: '€€' },
-    { slug: 'novembre', rating: 4.5, color: 'green', season: 'Été austral', temp: '28°C', price: '€€' },
-    { slug: 'decembre', rating: 3, color: 'orange', season: 'Été austral', temp: '30°C', price: '€€€€' }
+    { slug: 'janvier', url: '/ile-maurice-janvier-meteo-et-avis', rating: 3, color: 'orange', season: 'Été austral', temp: '30°C', price: '€€€' },
+    { slug: 'fevrier', url: '/ile-maurice-fevrier-avis-meteo', rating: 2.5, color: 'red', season: 'Été austral', temp: '31°C', price: '€€' },
+    { slug: 'mars', url: '/ile-maurice-mars-avis-meteo', rating: 3.5, color: 'yellow', season: 'Été austral', temp: '30°C', price: '€€' },
+    { slug: 'avril', url: '/ile-maurice-avril-avis-meteo', rating: 4.5, color: 'green', season: 'Automne austral', temp: '28°C', price: '€€' },
+    { slug: 'mai', url: '/ile-maurice-mai-avis', rating: 5, color: 'green', season: 'Automne austral', temp: '26°C', price: '€€' },
+    { slug: 'juin', url: '/ile-maurice-juin-avis-meteo', rating: 4.5, color: 'green', season: 'Hiver austral', temp: '24°C', price: '€€' },
+    { slug: 'juillet', url: '/ile-maurice-juillet-avis-meteo', rating: 4, color: 'yellow', season: 'Hiver austral', temp: '23°C', price: '€€€' },
+    { slug: 'aout', url: '/ile-maurice-aout-avis-meteo', rating: 3.5, color: 'yellow', season: 'Hiver austral', temp: '23°C', price: '€€€€' },
+    { slug: 'septembre', url: '/ile-maurice-septembre-avis', rating: 5, color: 'green', season: 'Printemps austral', temp: '25°C', price: '€€' },
+    { slug: 'octobre', url: '/ile-maurice-octobre-avis-meteo', rating: 5, color: 'green', season: 'Printemps austral', temp: '26°C', price: '€€' },
+    { slug: 'novembre', url: '/ile-maurice-novembre-avis-meteo', rating: 4.5, color: 'green', season: 'Été austral', temp: '28°C', price: '€€' },
+    { slug: 'decembre', url: '/ile-maurice-decembre-avis-meteo', rating: 3, color: 'orange', season: 'Été austral', temp: '30°C', price: '€€€€' }
   ];
 
   const getMonthName = (slug: string) => {
@@ -114,7 +114,7 @@ export default function QuandPartirPage() {
                 {monthsGrid.map((month) => (
                   <Link
                     key={month.slug}
-                    href={`/maurice-en-${month.slug}`}
+                    href={month.url}
                     className={`group relative ${getRatingColor(month.color)} rounded-xl p-4 transition-all hover:shadow-lg hover:-translate-y-1`}
                   >
                     <div className="text-center">
@@ -166,7 +166,7 @@ export default function QuandPartirPage() {
             {monthsGrid.map((month) => (
               <Link
                 key={month.slug}
-                href={`/maurice-en-${month.slug}`}
+                href={month.url}
                 className={`block rounded-2xl border-2 p-5 transition-all hover:shadow-xl hover:scale-105 ${getRatingColor(month.color)}`}
               >
                 <div className="flex items-center justify-between mb-3">
@@ -231,7 +231,7 @@ export default function QuandPartirPage() {
                 Pour un climat sec, ensoleillé et des températures agréables (24-26°C).
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-mai" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-mai-avis" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Mai</div>
@@ -240,7 +240,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🌟</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-septembre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-septembre-avis" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Septembre</div>
@@ -249,7 +249,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🌟</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-octobre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-octobre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Octobre</div>
@@ -271,7 +271,7 @@ export default function QuandPartirPage() {
                 Pour économiser 20-40% sur les vols et hébergements sans sacrifier la qualité.
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-avril" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-avril-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Avril</div>
@@ -280,7 +280,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">💎</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-mai" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-mai-avis" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Mai</div>
@@ -289,7 +289,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">💎</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-juin" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-juin-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Juin</div>
@@ -311,7 +311,7 @@ export default function QuandPartirPage() {
                 Pour profiter d'une eau chaude (26-28°C) et d'un lagon calme et turquoise.
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-janvier" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-janvier-meteo-et-avis" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Janvier</div>
@@ -320,7 +320,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🌊</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-octobre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-octobre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Octobre</div>
@@ -329,7 +329,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🌊</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-novembre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-novembre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Novembre</div>
@@ -351,7 +351,7 @@ export default function QuandPartirPage() {
                 Pour une visibilité maximale sous l'eau (20-30m) et observer la vie marine.
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-octobre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-octobre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Octobre</div>
@@ -360,7 +360,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🐠</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-novembre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-novembre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Novembre</div>
@@ -369,7 +369,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">🐠</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-decembre" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-decembre-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Décembre</div>
@@ -391,7 +391,7 @@ export default function QuandPartirPage() {
                 Pour marcher dans des conditions fraîches (20-25°C) et éviter la chaleur écrasante.
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-juin" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-juin-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Juin</div>
@@ -400,7 +400,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">⛰️</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-juillet" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-juillet-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Juillet</div>
@@ -409,7 +409,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">⛰️</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-aout" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-aout-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Août</div>
@@ -431,7 +431,7 @@ export default function QuandPartirPage() {
                 Pour profiter des vents alizés constants (20-25 nœuds) au Morne et Belle Mare.
               </p>
               <div className="space-y-2">
-                <Link href="/maurice-en-juin" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-juin-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Juin</div>
@@ -440,7 +440,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">💨</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-juillet" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-juillet-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Juillet</div>
@@ -449,7 +449,7 @@ export default function QuandPartirPage() {
                     <span className="text-2xl">💨</span>
                   </div>
                 </Link>
-                <Link href="/maurice-en-aout" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
+                <Link href="/ile-maurice-aout-avis-meteo" className="block bg-white rounded-xl p-4 hover:shadow-md transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-lg">Août</div>
@@ -655,19 +655,19 @@ export default function QuandPartirPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/maurice-en-mai"
+              href="/ile-maurice-mai-avis"
               className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg"
             >
               Voir Mai (5/5) →
             </Link>
             <Link
-              href="/maurice-en-septembre"
+              href="/ile-maurice-septembre-avis"
               className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg"
             >
               Voir Septembre (5/5) →
             </Link>
             <Link
-              href="/maurice-en-octobre"
+              href="/ile-maurice-octobre-avis-meteo"
               className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg"
             >
               Voir Octobre (5/5) →

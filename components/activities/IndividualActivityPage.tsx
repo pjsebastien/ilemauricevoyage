@@ -149,7 +149,7 @@ export default function IndividualActivityPage({ activity, relatedActivities, se
               <a
                 href={activity.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="w-full inline-flex items-center justify-center gap-3 px-8 py-5 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105 text-lg"
                 style={{ background: theme.gradientCSS }}
               >

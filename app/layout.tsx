@@ -7,21 +7,37 @@ import Footer from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Île Maurice Voyage - Organisez votre voyage et découvrez les meilleures activités',
+  title: {
+    default: 'Voyage île Maurice : le guide pour organiser votre séjour',
+    template: '%s | Île Maurice Voyage',
+  },
   description:
-    'Organisez votre voyage à l\'île Maurice en toute simplicité. Découvrez les meilleures activités, excursions et expériences authentiques.',
+    'Organisez votre voyage à l\'île Maurice étape par étape. Destinations, budget, itinéraires, activités, quand partir et infos pratiques. Le guide ultime pour préparer votre séjour de rêve.',
   keywords: [
-    'île maurice',
-    'voyage île maurice',
+    'voyage ile maurice',
+    'organiser voyage maurice',
+    'séjour ile maurice',
+    'vacances maurice',
+    'partir ile maurice',
+    'guide voyage maurice',
     'activités île maurice',
     'excursions île maurice',
-    'tourisme île maurice',
   ],
   openGraph: {
-    title: 'Île Maurice Voyage',
-    description: 'Organisez votre voyage à l\'île Maurice et découvrez les meilleures activités',
+    title: 'Voyage île Maurice : organisez votre séjour de rêve',
+    description: 'Destinations, budget, itinéraires, activités... Le guide étape par étape pour préparer votre voyage à Maurice.',
     type: 'website',
     locale: 'fr_FR',
+    siteName: 'Île Maurice Voyage',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Voyage île Maurice : le guide complet',
+    description: 'Organisez votre séjour à Maurice : destinations, budget, itinéraires et activités.',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

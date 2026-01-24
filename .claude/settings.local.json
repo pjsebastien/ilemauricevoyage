@@ -18,7 +18,12 @@
       "Bash(npx tsc:*)",
       "Bash(netstat:*)",
       "Bash(npm install:*)",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(del \"c:\\\\Users\\\\pjseb\\\\OneDrive\\\\Desktop\\\\ilemauricevoyagev2\\\\app\\\\layout-home.tsx\")",
+      "Bash(npm run lint)",
+      "Bash(dir:*)",
+      "Bash(tee:*)",
+      "Bash(echo:*)"
     ]
   }
 }

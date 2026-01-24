@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Où aller à Maurice ? Tous les spots pour un voyage réussi !',
-  description: 'Découvrez où partir à Maurice : 16 destinations comparées (plages, nature, culture). Grand Baie, Le Morne, Blue Bay, Rodrigues... Le guide complet pour choisir votre destination idéale.',
+  description: 'Découvrez où partir à Maurice : 16 destinations comparées (plages, nature, culture). Grand Baie, Le Morne, Blue Bay, Rodrigues... Le dossier complet pour choisir votre destination idéale.',
   keywords: 'où aller à Maurice, où partir à Maurice, destinations Maurice, voyage Maurice, plages Maurice, régions Maurice',
   openGraph: {
-    title: 'Où aller à Maurice ? Guide complet des destinations',
+    title: 'Où aller à Maurice ? Vue d’ensemble des destinations',
     description: 'Comparez toutes les destinations de l\'île Maurice : plages paradisiaques, montagnes, culture. Trouvez le spot parfait pour votre voyage.',
     type: 'article',
   },
@@ -436,7 +436,7 @@ function DestinationCard({ dest }: { dest: typeof destinations.nord[0] }) {
             href={`/que-faire-${dest.slug}`}
             className="flex-1 text-center bg-gray-900 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-gray-800 transition-colors"
           >
-            Guide complet
+            Le guide pas à pas
           </Link>
           <ActivityCTA location={dest.slug} className="flex-1 justify-center" />
         </div>
@@ -521,7 +521,7 @@ export default function OuAllerMauricePage() {
               ou un retour sur l&apos;île, choisir la bonne destination fait toute la différence.
             </p>
             <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 rounded-r-lg my-8">
-              <h3 className="text-lg font-semibold text-cyan-900 mb-2">Dans ce guide complet :</h3>
+              <h3 className="text-lg font-semibold text-cyan-900 mb-2">Dans ce dossier complet :</h3>
               <ul className="space-y-2 text-cyan-800">
                 <li className="flex items-center gap-2">
                   <Icons.Check className="w-5 h-5 text-cyan-600" />
@@ -900,7 +900,7 @@ export default function OuAllerMauricePage() {
                   <strong> Trou aux Biches</strong> pour les eaux calmes.
                 </p>
                 <div className="flex gap-2 flex-wrap">
-                  <Link href="/que-faire-blue-bay" className="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-100">
+                  <Link href="/blue-bay-ile-maurice" className="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-100">
                     → Blue Bay
                   </Link>
                   <Link href="/que-faire-flic-en-flac" className="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-100">

@@ -26,7 +26,7 @@ export default function FusionActivityPage({ group, seo }: FusionPageProps) {
   };
   const activitiesWithRating = activities.filter(a => a.rating !== null && a.rating > 0);
   const avgRating = activitiesWithRating.length > 0
-    ? (activitiesWithRating.reduce((sum, a) => sum + a.rating, 0) / activitiesWithRating.length).toFixed(1)
+    ? (activitiesWithRating.reduce((sum, a) => sum + (a.rating ?? 0), 0) / activitiesWithRating.length).toFixed(1)
     : '5.0';
   const totalReviews = activities.reduce((sum, a) => sum + a.reviewCount, 0);
 
@@ -253,7 +253,7 @@ export default function FusionActivityPage({ group, seo }: FusionPageProps) {
                         <a
                           href={activity.url}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer nofollow"
                           className="inline-flex items-center gap-2 px-8 py-4 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
                           style={{ background: theme.gradientCSS }}
                         >

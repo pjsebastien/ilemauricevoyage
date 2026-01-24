@@ -121,31 +121,42 @@ export interface LocationDataEnriched {
 
   // Budget
   budget: {
+    overview?: string;
     daily: {
-      budget: string;
-      midRange: string;
-      luxury: string;
+      budget: string | { total: string; accommodation: string; food: string; activities: string; transport: string; shopping?: string; };
+      midRange: string | { total: string; accommodation: string; food: string; activities: string; transport: string; shopping?: string; };
+      luxury?: string | { total: string; accommodation: string; food: string; activities: string; transport: string; shopping?: string; };
     };
-    breakdown: {
+    breakdown?: {
       accommodation: string;
       food: string;
       activities: string;
       transport: string;
     };
+    savingTips?: string[];
   };
 
   // Infos pratiques
   practical: {
-    atms: string;
-    supermarkets: string;
-    pharmacy: string;
-    hospital: string;
-    wifi: string;
-    electricity: string;
+    atms?: string;
+    supermarkets?: string;
+    pharmacy?: string;
+    hospital?: string;
+    wifi?: string;
+    electricity?: string;
+    whatToBring?: string[];
+    bestTimeToVisit?: string;
+    crowdLevel?: string;
+    accessibility?: string;
+    services?: string | { atm: string; medical: string; wifi: string; phone: string; };
+    parking?: string;
+    facilities?: string[];
+    safety?: string | string[] | { overall: string; tips: string[]; warnings?: string[]; };
+    emergency?: string;
   };
 
   // Sécurité
-  safety: {
+  safety?: {
     overall: string;
     tips: string[];
     emergency: string;

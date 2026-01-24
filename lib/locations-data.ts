@@ -26,8 +26,8 @@ export const locationsData: Record<string, LocationData> = {
     slug: 'grand-baie',
     name: 'Grand Baie',
     title: 'Que faire à Grand Baie',
-    metaTitle: 'Que faire à Grand Baie ? Top activités et excursions 2024',
-    metaDescription: 'Découvrez les meilleures activités à Grand Baie : plongée, catamaran, shopping, vie nocturne. Guide complet avec prix, conseils et meilleures périodes.',
+    metaTitle: 'Que faire à Grand Baie ? Top activités et excursions',
+    metaDescription: 'Découvrez les meilleures activités à Grand Baie : plongée, catamaran, shopping, vie nocturne. Dossier complet avec prix, conseils et meilleures périodes.',
     heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
     intro: 'Grand Baie est LA station balnéaire incontournable de l\'Île Maurice. Située au nord de l\'île, cette baie animée offre un mélange parfait entre activités nautiques, shopping, restaurants et vie nocturne.',
     highlights: [
@@ -53,7 +53,7 @@ export const locationsData: Record<string, LocationData> = {
     name: 'Flic en Flac',
     title: 'Que faire à Flic en Flac',
     metaTitle: 'Que faire à Flic en Flac ? Activités et plages 2024',
-    metaDescription: 'Guide complet de Flic en Flac : plongée, plages, excursions dauphins. Découvrez la meilleure côte pour votre séjour à Maurice avec tous nos conseils.',
+    metaDescription: 'Analyse détaillée de Flic en Flac : plongée, plages, excursions dauphins. Découvrez la meilleure côte pour votre séjour à Maurice avec tous nos conseils.',
     heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/02/meilleurs-hotels-5-etoiles-ile-maurice-plage.jpeg',
     intro: 'Flic en Flac est le paradis des plongeurs sur la côte ouest de Maurice. Cette longue plage de sable blanc offre une atmosphère plus décontractée que Grand Baie, avec d\'excellentes conditions pour la baignade et les sports nautiques.',
     highlights: [
@@ -79,7 +79,7 @@ export const locationsData: Record<string, LocationData> = {
     name: 'Le Morne',
     title: 'Que faire au Morne',
     metaTitle: 'Que faire au Morne ? Kitesurf, randonnée et plages 2024',
-    metaDescription: 'Le Morne : capitale du kitesurf, randonnée vers le sommet classé UNESCO, plages paradisiaques. Guide complet des activités et conseils pratiques.',
+    metaDescription: 'Le Morne : capitale du kitesurf, randonnée vers le sommet classé UNESCO, plages paradisiaques. Toutes les activités et conseils pratiques.',
     heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
     intro: 'Le Morne Brabant est l\'un des sites les plus emblématiques de Maurice. Cette péninsule du sud-ouest offre des paysages à couper le souffle, des plages paradisiaques et les meilleures conditions de kitesurf au monde.',
     highlights: [

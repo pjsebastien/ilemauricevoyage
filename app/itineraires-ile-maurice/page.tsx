@@ -95,7 +95,7 @@ const itineraire7jours: Day[] = [
       { time: 'Matin', activity: 'Randonnée Morne Brabant (3h) OU plage du Morne', link: '/que-faire-le-morne', type: 'activite' },
       { time: 'Midi', activity: 'Route vers l\'Est via la côte sud', type: 'transport' },
       { time: '14h', activity: 'Arrêt Gris-Gris (falaises, côte sauvage)', link: '/que-faire-souillac', type: 'visite' },
-      { time: '15h30', activity: 'Blue Bay - snorkeling parc marin', link: '/que-faire-blue-bay', type: 'plage' },
+      { time: '15h30', activity: 'Blue Bay - snorkeling parc marin', link: '/blue-bay-ile-maurice', type: 'plage' },
       { time: '18h', activity: 'Installation Belle Mare / Trou d\'Eau Douce', type: 'hebergement' },
     ],
     hebergement: 'Belle Mare ou Trou d\'Eau Douce',
@@ -265,7 +265,7 @@ const itineraire14jours: Day[] = [
       { time: '18h', activity: 'Retour hébergement', type: 'transport' },
     ],
     hebergement: 'Flic-en-Flac ou Blue Bay',
-    hebergementLink: '/que-faire-blue-bay',
+    hebergementLink: '/blue-bay-ile-maurice',
   },
   {
     jour: 13,

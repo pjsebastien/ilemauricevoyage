@@ -195,7 +195,7 @@ export function extractActivityEssentials(activity: Activity): ActivityEssential
     duration: durationStr,
     price: `${price.toFixed(0)}€`,
     difficulty,
-    minAge: enriched?.requirements?.minAge,
+    minAge: enriched?.requirements?.minAge ?? undefined,
     languages,
   };
 }
@@ -234,11 +234,11 @@ export function generateActivityIntro(group: ActivityGroup): string {
       min: Math.min(...activities.map(a => a.price)),
       max: Math.max(...activities.map(a => a.price)),
     };
-    const avgRating = (activities.reduce((sum, a) => sum + a.rating, 0) / count).toFixed(1);
+    const avgRating = (activities.reduce((sum, a) => sum + (a.rating ?? 0), 0) / count).toFixed(1);
 
     return `Vous cherchez une sortie ${category.toLowerCase()} à ${mainLocation} ? Cette page regroupe ${count} expériences différentes pour vous aider à choisir celle qui vous correspond le mieux. Les tarifs varient de ${priceRange.min.toFixed(0)}€ à ${priceRange.max.toFixed(0)}€ par personne selon la formule choisie. Ces activités affichent une note moyenne de ${avgRating}/5 d'après les avis de participants.`;
   } else {
     const activity = activities[0];
-    return `Cette sortie ${category.toLowerCase()} à ${mainLocation} est notée ${activity.rating}/5 par ${activity.reviewCount} participant${activity.reviewCount > 1 ? 's' : ''}. Au tarif de ${activity.price.toFixed(0)}€ par personne, cette expérience vous permet de découvrir ${mainLocation} sous un angle unique.`;
+    return `Cette sortie ${category.toLowerCase()} à ${mainLocation} est notée ${activity.rating ?? 5}/5 par ${activity.reviewCount} participant${activity.reviewCount > 1 ? 's' : ''}. Au tarif de ${activity.price.toFixed(0)}€ par personne, cette expérience vous permet de découvrir ${mainLocation} sous un angle unique.`;
   }
 }

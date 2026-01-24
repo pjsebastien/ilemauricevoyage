@@ -19,6 +19,7 @@ export default function Header() {
     { name: 'Itinéraires', href: '/itineraires-ile-maurice' },
     { name: 'Budget', href: '/budget-ile-maurice' },
     { name: 'Quand partir', href: '/quand-partir-ile-maurice' },
+    { name: 'Infos pratiques', href: '/infos-pratiques-ile-maurice' },
     { name: 'Activités', href: '/activites-ile-maurice' },
   ];
 

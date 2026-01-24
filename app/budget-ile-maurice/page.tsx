@@ -705,7 +705,7 @@ export default function BudgetMauricePage() {
             <h3 className="font-bold text-gray-900 mb-3">Astuce budget malin</h3>
             <p className="text-gray-700">
               Pour optimiser votre budget, combinez les régions : séjournez à <Link href="/que-faire-flic-en-flac" className="text-cyan-600 hover:underline">Flic-en-Flac</Link> ou
-              <Link href="/que-faire-blue-bay" className="text-cyan-600 hover:underline"> Blue Bay</Link> (économiques) et faites des excursions
+              <Link href="/blue-bay-ile-maurice" className="text-cyan-600 hover:underline"> Blue Bay</Link> (économiques) et faites des excursions
               à la journée vers les zones plus chères comme <Link href="/que-faire-belle-mare" className="text-cyan-600 hover:underline">Belle Mare</Link> ou
               <Link href="/que-faire-le-morne" className="text-cyan-600 hover:underline"> Le Morne</Link>.
             </p>

@@ -1501,7 +1501,7 @@ export const augustData: MonthData = {
     },
     {
       title: 'Spa et massage',
-      way: 'Échappez foules dans spa luxueux. Soins ayurvédiques, massages aux huiles. Réservez en ligne.',
+      why: 'Échappez foules dans spa luxueux. Soins ayurvédiques, massages aux huiles. Réservez en ligne.',
       link: '/activites-ile-maurice',
       icon: '💆'
     }

@@ -7,7 +7,14 @@ import CookieBanner from '@/components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// URL canonique unique pour tout le site
+const siteUrl = 'https://www.ilemauricevoyage.fr';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'Voyage île Maurice : le guide pour organiser votre séjour',
     template: '%s | Île Maurice Voyage',
@@ -27,6 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Voyage île Maurice : organisez votre séjour de rêve',
     description: 'Destinations, budget, itinéraires, activités... Le guide étape par étape pour préparer votre voyage à Maurice.',
+    url: siteUrl,
     type: 'website',
     locale: 'fr_FR',
     siteName: 'Île Maurice Voyage',

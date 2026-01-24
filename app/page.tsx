@@ -727,7 +727,7 @@ export default function HomePage() {
             "@type": "TravelAgency",
             "name": "Île Maurice Voyage",
             "description": "Guide complet pour organiser votre voyage à l'île Maurice : destinations, budget, itinéraires, activités et conseils pratiques.",
-            "url": "https://ilemauricevoyage.fr",
+            "url": "https://www.ilemauricevoyage.fr",
             "areaServed": {
               "@type": "Country",
               "name": "Mauritius"

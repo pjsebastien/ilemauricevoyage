@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Où aller à Maurice ? Tous les spots pour un voyage réussi !',
@@ -101,6 +102,26 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
     </svg>
   ),
+};
+
+// Images des destinations
+const destinationImages: Record<string, string> = {
+  'grand-baie': '/photos villes ilemaurice/grand baie ile maurice.jpg',
+  'cap-malheureux': '/photos villes ilemaurice/cap malheureux ile maurice.jpg',
+  'trou-aux-biches': '/photos villes ilemaurice/trou aux biches ile maurice.jpg',
+  'grand-gaube': '/photos villes ilemaurice/grand gaube ile maurice.jpg',
+  'belle-mare': '/photos villes ilemaurice/belle mare ile maurice.jpg',
+  'trou-deau-douce': "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg",
+  'ile-aux-cerfs': '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg',
+  'blue-bay': '/photos villes ilemaurice/blue bay ile maurice.jpg',
+  'le-morne': '/photos villes ilemaurice/le morne ile maurice.jpg',
+  'souillac': '/photos villes ilemaurice/souillac ile maurice.jpg',
+  'flic-en-flac': '/photos villes ilemaurice/flic en flac ile maurice.jpg',
+  'tamarin': '/photos villes ilemaurice/baie tamarin ile maurice.jpg',
+  'port-louis': '/photos villes ilemaurice/port louis ile maurice.jpg',
+  'chamouny': '/photos villes ilemaurice/chamouny ile maurice.jpg',
+  'chutes-tamarin': '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg',
+  'gorges-riviere-noire': '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg',
 };
 
 // Données des destinations organisées par région
@@ -361,10 +382,23 @@ function ActivityCTA({ location, className = '' }: { location: string; className
 
 // Composant carte destination
 function DestinationCard({ dest }: { dest: typeof destinations.nord[0] }) {
+  const imageUrl = destinationImages[dest.slug];
+
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
-      <div className="relative h-48 bg-gradient-to-br from-cyan-400 to-blue-500">
-        <div className="absolute inset-0 bg-black/20" />
+      <div className="relative h-48">
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt={`${dest.name} - Île Maurice`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute top-4 left-4">
           <span className="bg-white/90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
             {dest.budget}
@@ -1041,6 +1075,88 @@ export default function OuAllerMauricePage() {
                 </div>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Maillage - Découvrir plus */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Liens vers les pages principales */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <Link
+              href="/que-faire-ile-maurice"
+              className="group block bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-6 text-white hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">🎯</span>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">Que faire à l'Île Maurice ?</h3>
+                  <p className="text-white/90 text-sm">Activités, plages, randonnées, culture...</p>
+                </div>
+                <Icons.ArrowRight className="w-6 h-6 ml-auto group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/itineraires-ile-maurice"
+              className="group block bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl p-6 text-white hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">🗺️</span>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">Itinéraires 7, 10 ou 14 jours</h3>
+                  <p className="text-white/90 text-sm">Circuits détaillés jour par jour</p>
+                </div>
+                <Icons.ArrowRight className="w-6 h-6 ml-auto group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </div>
+
+          {/* Grille de toutes les destinations */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Guides détaillés par destination
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
+            {Object.entries(destinationImages).map(([slug, image]) => {
+              const names: Record<string, string> = {
+                'grand-baie': 'Grand Baie',
+                'cap-malheureux': 'Cap Malheureux',
+                'trou-aux-biches': 'Trou aux Biches',
+                'grand-gaube': 'Grand Gaube',
+                'belle-mare': 'Belle Mare',
+                'trou-deau-douce': "Trou d'Eau Douce",
+                'ile-aux-cerfs': 'Île aux Cerfs',
+                'blue-bay': 'Blue Bay',
+                'le-morne': 'Le Morne',
+                'souillac': 'Souillac',
+                'flic-en-flac': 'Flic en Flac',
+                'tamarin': 'Tamarin',
+                'port-louis': 'Port-Louis',
+                'chamouny': 'Chamouny',
+                'chutes-tamarin': 'Chutes Tamarin',
+                'gorges-riviere-noire': 'Gorges R. Noire',
+              };
+              return (
+                <Link
+                  key={slug}
+                  href={slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${slug}`}
+                  className="group relative rounded-xl overflow-hidden aspect-square"
+                >
+                  <Image
+                    src={image}
+                    alt={names[slug] || slug}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 25vw, 12.5vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <p className="text-white text-xs font-medium truncate">{names[slug] || slug}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -173,27 +173,35 @@ const mauriceHighlights = [
   { icon: Icons.Users, value: '1.3M', label: 'touristes/an' },
 ];
 
-// Données des points forts
+// Données des points forts - Pourquoi l'île Maurice
 const whyMaurice = [
   {
     title: 'Plages paradisiaques',
-    description: 'Lagons turquoise, sable blanc, récifs coralliens... Les plus belles plages de l\'océan Indien.',
-    image: '/images/plage.jpg',
+    description: 'L\'île Maurice possède certaines des plus belles plages au monde. Le lagon de Blue Bay, classé parc marin, offre des eaux cristallines idéales pour le snorkeling. La plage de Trou aux Biches au nord séduit par son sable blanc et ses eaux calmes, parfaites pour les familles. Au sud, le Morne Brabant domine une plage sauvage prisée des kitesurfeurs.',
+    highlights: ['Blue Bay - parc marin protégé', 'Trou aux Biches - idéal familles', 'Le Morne - spot kitesurf mondial'],
+    icon: Icons.Beach,
+    color: 'from-cyan-500 to-blue-500',
   },
   {
     title: 'Nature préservée',
-    description: 'Montagnes, cascades, forêts tropicales et jardins botaniques à explorer.',
-    image: '/images/nature.jpg',
+    description: 'Des paysages à couper le souffle vous attendent : les terres des 7 couleurs de Chamarel, la cascade de 100 mètres, le cratère du volcan Trou aux Cerfs, les gorges de la Rivière Noire. Randonnez jusqu\'au sommet du Morne Brabant (UNESCO) ou explorez les forêts primaires du Parc National des Gorges de la Rivière Noire.',
+    highlights: ['Chamarel - terres des 7 couleurs', 'Le Morne - patrimoine UNESCO', 'Parc des Gorges - 60 km de sentiers'],
+    icon: Icons.Sparkles,
+    color: 'from-emerald-500 to-teal-500',
   },
   {
-    title: 'Culture métissée',
-    description: 'Un mélange unique de cultures indienne, africaine, française et chinoise.',
-    image: '/images/culture.jpg',
+    title: 'Culture métissée unique',
+    description: 'Maurice est un melting-pot fascinant où cohabitent harmonieusement hindous, musulmans, chrétiens et bouddhistes. Visitez le temple tamoul de Grand Bassin, la mosquée Jummah à Port-Louis, les églises coloniales. Chaque communauté célèbre ses fêtes : Divali, Cavadee, Eid, Nouvel An chinois... Une richesse culturelle unique au monde.',
+    highlights: ['Grand Bassin - lac sacré hindou', 'Port-Louis - capitale cosmopolite', 'Fêtes religieuses toute l\'année'],
+    icon: Icons.Globe,
+    color: 'from-violet-500 to-purple-500',
   },
   {
     title: 'Gastronomie savoureuse',
-    description: 'Curry, rougaille, dholl puri... Une cuisine fusion aux saveurs inoubliables.',
-    image: '/images/food.jpg',
+    description: 'La cuisine mauricienne fusionne les saveurs indiennes, chinoises, créoles et françaises. Goûtez au dholl puri (galette de lentilles), au rougaille (sauce tomate épicée), aux mines frites (nouilles sautées), au vindaye de poisson. Ne manquez pas les street foods de Port-Louis et une dégustation de rhum dans une distillerie locale.',
+    highlights: ['Dholl puri - incontournable', 'Rhum Chamarel - médaillé d\'or', 'Street food Port-Louis'],
+    icon: Icons.Heart,
+    color: 'from-rose-500 to-pink-500',
   },
 ];
 
@@ -556,16 +564,38 @@ export default function HomePage() {
             {/* Right - Image Grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: 'Dauphins', gradient: 'from-blue-400 to-cyan-500' },
-                { title: 'Catamaran', gradient: 'from-emerald-400 to-teal-500' },
-                { title: 'Randonnée', gradient: 'from-amber-400 to-orange-500' },
-                { title: 'Plongée', gradient: 'from-violet-400 to-purple-500' },
+                {
+                  title: 'Dauphins',
+                  image: 'https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=400&h=300&fit=crop',
+                  alt: 'Nager avec les dauphins à l\'île Maurice'
+                },
+                {
+                  title: 'Catamaran',
+                  image: 'https://images.unsplash.com/photo-1500514966906-fe245eea9344?w=400&h=300&fit=crop',
+                  alt: 'Excursion en catamaran île Maurice'
+                },
+                {
+                  title: 'Randonnée',
+                  image: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&h=300&fit=crop',
+                  alt: 'Randonnée Le Morne Brabant île Maurice'
+                },
+                {
+                  title: 'Plongée',
+                  image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop',
+                  alt: 'Plongée sous-marine île Maurice récifs coralliens'
+                },
               ].map((item, index) => (
                 <div
                   key={item.title}
                   className={`relative h-40 rounded-2xl overflow-hidden ${index === 0 || index === 3 ? 'mt-6' : ''}`}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient}`} />
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute inset-0 flex items-end p-4">
                     <span className="text-white font-bold text-lg">{item.title}</span>
                   </div>
@@ -594,17 +624,48 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { region: 'Nord', description: 'Plages animées, vie nocturne, Grand Baie', color: 'from-cyan-500 to-blue-500', slug: 'grand-baie' },
-              { region: 'Sud', description: 'Nature sauvage, falaises, authenticité', color: 'from-emerald-500 to-teal-500', slug: 'le-morne' },
-              { region: 'Est', description: 'Resorts de luxe, lagons turquoise', color: 'from-violet-500 to-purple-500', slug: 'ile-aux-cerfs' },
-              { region: 'Ouest', description: 'Couchers de soleil, Chamarel, Flic en Flac', color: 'from-amber-500 to-orange-500', slug: 'flic-en-flac' },
+              {
+                region: 'Nord',
+                description: 'Plages animées, vie nocturne, Grand Baie',
+                slug: 'grand-baie',
+                image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=400&h=250&fit=crop',
+                alt: 'Grand Baie île Maurice plages et vie nocturne'
+              },
+              {
+                region: 'Sud',
+                description: 'Nature sauvage, falaises, authenticité',
+                slug: 'le-morne',
+                image: 'https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?w=400&h=250&fit=crop',
+                alt: 'Le Morne Brabant sud île Maurice nature sauvage'
+              },
+              {
+                region: 'Est',
+                description: 'Resorts de luxe, lagons turquoise',
+                slug: 'ile-aux-cerfs',
+                image: 'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=400&h=250&fit=crop',
+                alt: 'Île aux Cerfs lagon turquoise île Maurice'
+              },
+              {
+                region: 'Ouest',
+                description: 'Couchers de soleil, Chamarel, Flic en Flac',
+                slug: 'flic-en-flac',
+                image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=250&fit=crop',
+                alt: 'Coucher de soleil Flic en Flac ouest île Maurice'
+              },
             ].map((item) => (
               <Link
                 key={item.region}
                 href={`/que-faire-${item.slug}`}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all"
               >
-                <div className={`h-32 bg-gradient-to-br ${item.color}`} />
+                <div className="relative h-32">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-5">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-cyan-600 transition-colors">
                     {item.region}
@@ -630,8 +691,75 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pourquoi Maurice */}
+      {/* Toutes les destinations */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-sm font-semibold mb-4">
+              <Icons.MapPin className="w-4 h-4" />
+              Destinations populaires
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Explorez toutes les destinations
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Découvrez les plus beaux endroits de l&apos;île Maurice et trouvez votre destination idéale
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'Grand Baie', slug: 'grand-baie', image: '/photos villes ilemaurice/grand baie ile maurice.jpg', description: 'Vie nocturne, shopping, sports nautiques' },
+              { name: 'Flic en Flac', slug: 'flic-en-flac', image: '/photos villes ilemaurice/flic en flac ile maurice.jpg', description: 'Longue plage, plongée, couchers de soleil' },
+              { name: 'Le Morne', slug: 'le-morne', image: '/photos villes ilemaurice/le morne ile maurice.jpg', description: 'Kitesurf, randonnée UNESCO, nature' },
+              { name: 'Île aux Cerfs', slug: 'ile-aux-cerfs', image: '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg', description: 'Plages paradisiaques, excursions bateau' },
+              { name: 'Belle Mare', slug: 'belle-mare', image: '/photos villes ilemaurice/belle mare ile maurice.jpg', description: 'Resorts luxe, plages immaculées' },
+              { name: 'Trou aux Biches', slug: 'trou-aux-biches', image: '/photos villes ilemaurice/trou aux biches ile maurice.jpg', description: 'Plage familiale, snorkeling tortues' },
+              { name: 'Blue Bay', slug: 'blue-bay', image: '/photos villes ilemaurice/blue bay ile maurice.jpg', description: 'Parc marin, snorkeling, coraux' },
+              { name: 'Tamarin', slug: 'tamarin', image: '/photos villes ilemaurice/baie tamarin ile maurice.jpg', description: 'Surf, dauphins, ambiance bohème' },
+              { name: 'Cap Malheureux', slug: 'cap-malheureux', image: '/photos villes ilemaurice/cap malheureux ile maurice.jpg', description: 'Église au toit rouge, village pêcheurs' },
+              { name: 'Trou d\'Eau Douce', slug: 'trou-deau-douce', image: "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg", description: 'Départ Île aux Cerfs, cascade GRSE' },
+              { name: 'Port-Louis', slug: 'port-louis', image: '/photos villes ilemaurice/port louis ile maurice.jpg', description: 'Capitale, marché, Caudan Waterfront' },
+              { name: 'Souillac', slug: 'souillac', image: '/photos villes ilemaurice/souillac ile maurice.jpg', description: 'Falaises Gris Gris, côte sauvage' },
+              { name: 'Grand Gaube', slug: 'grand-gaube', image: '/photos villes ilemaurice/grand gaube ile maurice.jpg', description: 'Village authentique, plages calmes' },
+              { name: 'Chamouny', slug: 'chamouny', image: '/photos villes ilemaurice/chamouny ile maurice.jpg', description: 'Randonnées, tyrolienne, nature' },
+              { name: 'Chutes de Tamarin', slug: 'chutes-tamarin', image: '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg', description: '7 cascades, canyoning, aventure' },
+              { name: 'Gorges Rivière Noire', slug: 'gorges-riviere-noire', image: '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg', description: 'Parc national, randonnées, forêt' },
+            ].map((dest) => (
+              <Link
+                key={dest.slug}
+                href={dest.slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${dest.slug}`}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
+              >
+                <div className="relative h-40">
+                  <Image
+                    src={dest.image}
+                    alt={`Que faire à ${dest.name} - Île Maurice`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-3 left-3">
+                    <h3 className="text-lg font-bold text-white drop-shadow-lg">
+                      {dest.name}
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm line-clamp-2">{dest.description}</p>
+                  <div className="mt-3 flex items-center text-emerald-600 text-sm font-medium group-hover:text-emerald-700">
+                    <span>Découvrir</span>
+                    <Icons.ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi Maurice */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 text-rose-700 text-sm font-semibold mb-4">
@@ -643,16 +771,31 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyMaurice.map((item, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center text-white mb-4">
-                  <Icons.Star className="w-6 h-6" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {whyMaurice.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center flex-shrink-0`}>
+                      <IconComponent className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{item.title}</h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.highlights.map((highlight, idx) => (
+                      <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        <Icons.Check className="w-3 h-3 text-emerald-500" />
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

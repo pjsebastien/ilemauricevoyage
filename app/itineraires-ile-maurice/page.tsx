@@ -2,6 +2,46 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Images des destinations
+const destinationImages: Record<string, string> = {
+  'grand-baie': '/photos villes ilemaurice/grand baie ile maurice.jpg',
+  'cap-malheureux': '/photos villes ilemaurice/cap malheureux ile maurice.jpg',
+  'trou-aux-biches': '/photos villes ilemaurice/trou aux biches ile maurice.jpg',
+  'grand-gaube': '/photos villes ilemaurice/grand gaube ile maurice.jpg',
+  'belle-mare': '/photos villes ilemaurice/belle mare ile maurice.jpg',
+  'trou-deau-douce': "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg",
+  'ile-aux-cerfs': '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg',
+  'blue-bay': '/photos villes ilemaurice/blue bay ile maurice.jpg',
+  'le-morne': '/photos villes ilemaurice/le morne ile maurice.jpg',
+  'souillac': '/photos villes ilemaurice/souillac ile maurice.jpg',
+  'flic-en-flac': '/photos villes ilemaurice/flic en flac ile maurice.jpg',
+  'tamarin': '/photos villes ilemaurice/baie tamarin ile maurice.jpg',
+  'port-louis': '/photos villes ilemaurice/port louis ile maurice.jpg',
+  'chamouny': '/photos villes ilemaurice/chamouny ile maurice.jpg',
+  'chutes-tamarin': '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg',
+  'gorges-riviere-noire': '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg',
+};
+
+const destinationNames: Record<string, string> = {
+  'grand-baie': 'Grand Baie',
+  'cap-malheureux': 'Cap Malheureux',
+  'trou-aux-biches': 'Trou aux Biches',
+  'grand-gaube': 'Grand Gaube',
+  'belle-mare': 'Belle Mare',
+  'trou-deau-douce': "Trou d'Eau Douce",
+  'ile-aux-cerfs': 'Île aux Cerfs',
+  'blue-bay': 'Blue Bay',
+  'le-morne': 'Le Morne',
+  'souillac': 'Souillac',
+  'flic-en-flac': 'Flic en Flac',
+  'tamarin': 'Tamarin',
+  'port-louis': 'Port-Louis',
+  'chamouny': 'Chamouny',
+  'chutes-tamarin': 'Chutes Tamarin',
+  'gorges-riviere-noire': 'Gorges R. Noire',
+};
 
 // Types
 type DayActivity = {
@@ -903,6 +943,72 @@ export default function ItinerairesMauricePage() {
                   {faq.a}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Maillage - Découvrir les destinations */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Liens vers les pages principales */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <Link
+              href="/que-faire-ile-maurice"
+              className="group block bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-6 text-white hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">🎯</span>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">Que faire à l&apos;Île Maurice ?</h3>
+                  <p className="text-white/90 text-sm">Activités, plages, randonnées, culture...</p>
+                </div>
+                <svg className="w-6 h-6 ml-auto group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </Link>
+
+            <Link
+              href="/ou-aller-ile-maurice"
+              className="group block bg-gradient-to-r from-emerald-600 to-teal-500 rounded-2xl p-6 text-white hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">📍</span>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">Où aller à Maurice ?</h3>
+                  <p className="text-white/90 text-sm">Comparez toutes les destinations</p>
+                </div>
+                <svg className="w-6 h-6 ml-auto group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </Link>
+          </div>
+
+          {/* Grille de toutes les destinations */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Guides détaillés par destination
+          </h2>
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
+            {Object.entries(destinationImages).map(([slug, image]) => (
+              <Link
+                key={slug}
+                href={slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${slug}`}
+                className="group relative rounded-xl overflow-hidden aspect-square"
+              >
+                <Image
+                  src={image}
+                  alt={destinationNames[slug] || slug}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 25vw, 12.5vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute bottom-1 left-1 right-1">
+                  <p className="text-white text-[10px] md:text-xs font-medium truncate text-center">{destinationNames[slug] || slug}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

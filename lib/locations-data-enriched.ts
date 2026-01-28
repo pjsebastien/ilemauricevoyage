@@ -46,6 +46,7 @@ export interface LocationDataEnriched {
   metaTitle: string;
   metaDescription: string;
   heroImage: string;
+  images: string[]; // Galerie d'images de la destination
 
   // Introduction
   intro: string;
@@ -199,7 +200,11 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Grand Baie',
     metaTitle: 'Grand Baie Maurice : activités, hôtels, restaurants, vie nocturne',
     metaDescription: 'Découvrez Grand Baie : meilleures activités, hébergements, restaurants, plages, vie nocturne et budget pour votre séjour dans le nord de Maurice.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/grand baie ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/grand baie ile maurice.jpg',
+      '/photos villes ilemaurice/grand baie ile maurice (2).jpg',
+    ],
 
     intro: 'Grand Baie est LA station balnéaire incontournable de l\'Île Maurice. Centre névralgique du tourisme mauricien, cette baie animée du nord offre le meilleur de l\'île : activités nautiques exceptionnelles, shopping cosmopolite, restaurants internationaux et vie nocturne vibrante.',
 
@@ -687,7 +692,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Flic en Flac',
     metaTitle: 'Flic en Flac Maurice : plage, plongée sous-marine, hébergements, restaurants',
     metaDescription: 'Flic en Flac côte ouest : longue plage de 5 km, meilleurs sites de plongée, hébergements, restaurants créoles et infos pratiques pour votre séjour.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/flic en flac ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/flic en flac ile maurice.jpg',
+      '/photos villes ilemaurice/flic en flac ile maurice (2).jpg',
+      '/photos villes ilemaurice/flic en flac ile maurice (3).jpg',
+    ],
 
     intro: 'Flic en Flac est la station balnéaire favorite de la côte ouest de Maurice. Célèbre pour sa longue plage de sable blanc (5 km), ses couchers de soleil spectaculaires et ses sites de plongée parmi les meilleurs de l\'île, c\'est une destination idéale pour familles, couples et amateurs de fonds marins.',
 
@@ -1141,7 +1151,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire au Morne',
     metaTitle: 'Le Morne Maurice : kitesurf, randonnée montagne UNESCO, plages turquoise',
     metaDescription: 'Le Morne sud-ouest : spot de kitesurf mondial, randonnée montagne Brabant UNESCO, plages sublimes, resorts luxe et infos pratiques pour votre séjour.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/le morne ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/le morne ile maurice.jpg',
+      '/photos villes ilemaurice/le morne ile maurice (2).jpg',
+      '/photos villes ilemaurice/le morne ile maurice (3).jpg',
+    ],
 
     intro: 'Le Morne est le paradis absolu des kitesurfeurs et amateurs de nature sauvage. Dominé par son montagne iconique (UNESCO), bordé de lagons turquoise spectaculaires et balayé par des vents constants, c\'est le spot incontournable de Maurice pour sports de glisse et randonnées panoramiques.',
 
@@ -1577,7 +1592,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à l\'Île aux Cerfs',
     metaTitle: 'Île aux Cerfs Maurice : excursions, activités nautiques, plages paradisiaques',
     metaDescription: 'Île aux Cerfs côte est : excursions catamaran, activités nautiques, plages de rêve, restaurants, golf et toutes les infos pour organiser votre journée sur l\'île.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg',
+      '/photos villes ilemaurice/ile aux cerfs ile maurice (2).jpg',
+      '/photos villes ilemaurice/ile aux cerfs ile maurice (3).jpg',
+    ],
 
     intro: 'L\'Île aux Cerfs est l\'excursion la plus emblématique de Maurice. Ce petit paradis tropical de 87 hectares au large de la côte est séduit par ses plages de carte postale, son lagon turquoise cristallin et ses multiples activités nautiques. Accessible uniquement par bateau depuis Trou d\'Eau Douce, c\'est la destination rêvée pour une journée inoubliable.',
 
@@ -2060,7 +2080,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Belle Mare',
     metaTitle: 'Belle Mare Maurice : resorts 5 étoiles, plages, golf, activités luxe',
     metaDescription: 'Belle Mare côte est : resorts 5 étoiles prestigieux, plages immaculées, golf international, snorkeling et restaurants gastronomiques pour un séjour luxe.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/belle mare ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/belle mare ile maurice.jpg',
+      '/photos villes ilemaurice/belle mare ile maurice (2).jpg',
+      '/photos villes ilemaurice/belle mare ile maurice (3).jpg',
+    ],
 
     intro: 'Belle Mare est le joyau de la côte est mauricienne, référence absolue du tourisme luxe à Maurice. Cette portion de littoral de 10 km concentre les resorts 5 étoiles les plus prestigieux de l\'île, alignés face à l\'une des plus belles plages de l\'océan Indien. Sable blanc poudreux, lagon turquoise cristallin, cocotiers et filaos : cadre paradisiaque garanti.',
 
@@ -2561,7 +2586,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Trou aux Biches',
     metaTitle: 'Trou aux Biches Maurice : plage sublime, snorkeling avec tortues, resorts',
     metaDescription: 'Trou aux Biches nord-ouest : plage magnifique de 2 km, snorkeling exceptionnel avec tortues, resorts familiaux, restaurants et activités pour votre séjour.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/trou aux biches ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/trou aux biches ile maurice.jpg',
+      '/photos villes ilemaurice/trou aux biches ile maurice (2).jpg',
+      '/photos villes ilemaurice/trou aux biches ile maurice (3).jpg',
+    ],
 
     intro: 'Trou aux Biches est un petit paradis balnéaire du nord-ouest mauricien, célèbre pour sa plage sublime classée parmi les plus belles de l\'île. À seulement 5 km de Grand Baie, ce village préservé offre le parfait compromis : plage de rêve pour familles, snorkeling exceptionnel avec tortues marines, ambiance tranquille mais accès facile aux animations de Grand Baie.',
 
@@ -3079,7 +3109,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Blue Bay',
     metaTitle: 'Blue Bay Maurice : parc marin protégé, snorkeling, glass bottom boats',
     metaDescription: 'Blue Bay sud-est : parc marin protégé, meilleur snorkeling de Maurice, glass bottom boats, plage tranquille et restaurants pour votre visite.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/blue bay ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/blue bay ile maurice.jpg',
+      '/photos villes ilemaurice/blue bay ile maurice (2).jpg',
+      '/photos villes ilemaurice/blue bay ile maurice (3).jpg',
+    ],
 
     intro: 'Blue Bay est une petite station balnéaire du sud-est mauricien, célèbre pour son parc marin protégé classé site Ramsar. Cette baie préservée offre le meilleur snorkeling du sud de l\'île : coraux exceptionnels, poissons tropicaux multicolores, eau cristalline turquoise. Ambiance tranquille, authentique, loin du tourisme de masse.',
 
@@ -3559,7 +3594,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Tamarin',
     metaTitle: 'Tamarin Maurice : surf, nage avec dauphins, plages, ambiance locale',
     metaDescription: 'Tamarin côte ouest : spot de surf réputé, nage avec dauphins sauvages, plages authentiques, salt pans colorés et vie locale pour un séjour différent.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/baie tamarin ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/baie tamarin ile maurice.jpg',
+      '/photos villes ilemaurice/baie tamarin ile maurice (2).jpg',
+      '/photos villes ilemaurice/baie tamarin ile maurice (3).jpg',
+    ],
 
     intro: 'Tamarin est le village bohème-surf de la côte ouest mauricienne. Cette baie sauvage préservée séduit par son ambiance décontractée loin du tourisme de masse : surfeurs internationaux, expatriés artistes, familles mauriciennes. Vagues légendaires, nage avec dauphins sauvages, sunset spectaculaires, salt pans photogéniques, vie locale authentique.',
 
@@ -4090,7 +4130,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Cap Malheureux',
     metaTitle: 'Cap Malheureux Maurice : église toit rouge, village pêcheurs, îles nord',
     metaDescription: 'Cap Malheureux pointe nord : église iconique au toit rouge, village de pêcheurs authentique, départ excursions îles nord et plages tranquilles.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/cap malheureux ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/cap malheureux ile maurice.jpg',
+      '/photos villes ilemaurice/cap malheureux ile maurice (2).jpg',
+      '/photos villes ilemaurice/cap malheureux ile maurice (3).jpg',
+    ],
 
     intro: 'Cap Malheureux est le point le plus septentrional de l\'Île Maurice, village de pêcheurs authentique célèbre pour son église Notre-Dame Auxiliatrice au toit rouge vif. Carte postale vivante mauricienne : église photogénique, pirouges colorées, vue sur îlots du nord (Coin de Mire, Île Plate), ambiance locale préservée, gateway pour excursions îles.',
 
@@ -4471,7 +4516,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Trou d\'Eau Douce',
     metaTitle: 'Trou d\'Eau Douce Maurice : Île aux Cerfs, GRSE cascade, village pêcheurs',
     metaDescription: 'Trou d\'Eau Douce côte est : point de départ Île aux Cerfs, GRSE waterfall, village de pêcheurs authentique et restaurants créoles locaux.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg",
+    images: [
+      "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg",
+      "/photos villes ilemaurice/trou d'eau douce ile maurice (2).jpg",
+      "/photos villes ilemaurice/trou d'eau douce ile maurice (3).jpg",
+    ],
 
     intro: 'Trou d\'Eau Douce est le village gateway de l\'Île aux Cerfs, perle de la côte est mauricienne. Ce village de pêcheurs authentique concentre l\'essentiel des départs en bateau vers l\'île paradisiaque tout en préservant son âme locale : embarcadère animé, pirogues colorées, restaurants créoles, excursions GRSE (Grand River South East) remontée rivière-cascade.',
 
@@ -4897,7 +4947,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Port-Louis',
     metaTitle: 'Port-Louis Maurice : capitale, Caudan Waterfront, marché central, musées',
     metaDescription: 'Port-Louis capitale : Caudan Waterfront, marché central coloré, musées historiques, Chinatown, quartiers coloniaux et shopping pour découvrir la ville mauricienne.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/port louis ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/port louis ile maurice.jpg',
+      '/photos villes ilemaurice/port louis ile maurice (2).jpg',
+      '/photos villes ilemaurice/port louis ile maurice (3).jpg',
+    ],
 
     intro: 'Port-Louis est la capitale bouillonnante de l\'Île Maurice, cœur politique-économique-culturel du pays. Ville portuaire historique cosmopolite : Caudan Waterfront moderne, marché central authentique bouillonnant, Chinatown coloré, musées fascinants, fort Adélaïde panoramique, business district gratte-ciels. Contraste saisissant entre tradition et modernité, melting-pot culturel mauricien à l\'état pur.',
 
@@ -5301,7 +5356,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Souillac',
     metaTitle: 'Souillac Maurice : Gris Gris, Rochester Falls, côte sauvage sud',
     metaDescription: 'Souillac sud Maurice : Gris Gris cliffs spectaculaires, Roche Qui Pleure, Rochester Falls cascade, côte sauvage battue par les vagues et village authentique.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/souillac ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/souillac ile maurice.jpg',
+      '/photos villes ilemaurice/souillac ile maurice (2).jpg',
+      '/photos villes ilemaurice/souillac ile maurice (3).jpg',
+    ],
 
     intro: 'Souillac est le village sauvage de la côte sud mauricienne, aux antipodes des plages carte postale nord. Falaises dramatiques battues par vagues puissantes océan Indien, paysages spectaculaires Gris Gris, Roche Qui Pleure mystérieuse, Rochester Falls cascade forêt. Ambiance authentique mélancolique, nature brute préservée, loin tourisme de masse.',
 
@@ -5680,7 +5740,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Grand Gaube',
     metaTitle: 'Grand Gaube Maurice : village pêcheurs, plages calmes, authenticité',
     metaDescription: 'Grand Gaube côte est : village de pêcheurs authentique, plages calmes peu fréquentées, ambiance locale préservée loin du tourisme de masse.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/grand gaube ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/grand gaube ile maurice.jpg',
+      '/photos villes ilemaurice/grand gaube ile maurice (2).jpg',
+      '/photos villes ilemaurice/grand gaube ile maurice (3).jpg',
+    ],
 
     intro: 'Grand Gaube est un village de pêcheurs authentique de la côte nord-est mauricienne, aux antipodes du tourisme de masse. Ambiance locale tranquille préservée : pirogues colorées amarrées baie, pêcheurs vendant prises matinales, familles mauriciennes pique-niquant plage calme week-ends. Destination confidentielle pour amateurs authenticité loin sentiers battus.',
 
@@ -6088,7 +6153,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire à Chamouny',
     metaTitle: 'Chamouny Maurice : randonnées montagnes, nature sauvage sud',
     metaDescription: 'Chamouny sud Maurice : point de départ randonnées parc national, forêts tropicales, Piton Petite Rivière Noire 828m. Nature préservée hors sentiers battus.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/chamouny ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/chamouny ile maurice.jpg',
+      '/photos villes ilemaurice/chamouny ile maurice (2).jpg',
+      '/photos villes ilemaurice/chamouny ile maurice (3).jpg',
+    ],
 
     intro: 'Chamouny est une petite localité rurale du sud-ouest de Maurice, nichée au pied des montagnes du parc national des Gorges de Rivière Noire. Point de départ privilégié pour les randonnées vers le Piton de la Petite Rivière Noire (828m, point culminant de Maurice), cette zone offre des paysages de forêts tropicales préservées, des sentiers sauvages et une immersion totale dans la nature mauricienne authentique.',
 
@@ -6432,7 +6502,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire aux Chutes de Tamarin',
     metaTitle: 'Chutes Tamarin Maurice : canyoning 7 cascades, aventure jungle',
     metaDescription: 'Chutes de Tamarin (Tamarind Falls) : canyoning 7 cascades spectaculaires, sauts, rappels, toboggans naturels. Aventure jungle tropicale inoubliable.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg',
+      '/photos villes ilemaurice/chutes de tamarin ile maurice (2).jpg',
+      '/photos villes ilemaurice/chutes de tamarin ile maurice (3).jpg',
+    ],
 
     intro: 'Les Chutes de Tamarin (Tamarind Falls ou 7 Cascades) offrent l\'aventure la plus spectaculaire de Maurice. Ce canyon de 7 cascades successives dans la jungle tropicale permet canyoning, sauts jusqu\'à 12 mètres, rappels et toboggans naturels. Bassins émeraude, forêt dense, sensations fortes : une expérience unique pour amateurs d\'aventure et nature sauvage.',
 
@@ -6769,7 +6844,12 @@ export const enrichedLocationsData: Record<string, LocationDataEnriched> = {
     title: 'Que faire aux Gorges de Rivière Noire',
     metaTitle: 'Gorges Rivière Noire Maurice : parc national, randonnées, cascades',
     metaDescription: 'Parc National Gorges Rivière Noire : 16 sentiers randonnée, forêt tropicale, cascades Alexandra Falls, oiseaux endémiques. Nature sauvage Maurice préservée.',
-    heroImage: 'https://www.blog.ilemauricevoyage.fr/wp-content/uploads/2024/03/ile-maurice-voyage-scaled.jpg',
+    heroImage: '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg',
+    images: [
+      '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg',
+      '/photos villes ilemaurice/gorge rivière noire ile maurice (2).jpg',
+      '/photos villes ilemaurice/gorge rivière noire ile maurice (3).jpg',
+    ],
 
     intro: 'Le Parc National des Gorges de Rivière Noire est le plus grand espace naturel protégé de Maurice (6 754 hectares). Cette réserve préserve les dernières forêts tropicales indigènes de l\'île avec 16 sentiers de randonnée balisés, des cascades spectaculaires (Alexandra Falls, cascades 500 Pieds), des points de vue panoramiques et une faune endémique rare. Destination incontournable pour randonneurs et amoureux de nature sauvage.',
 

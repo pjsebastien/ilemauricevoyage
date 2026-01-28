@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { LocationDataEnriched, getNearbyLocations } from '@/lib/locations-data-enriched';
+import { LocationDataEnriched, getNearbyLocations, getAllLocationSlugs, getLocationBySlug } from '@/lib/locations-data-enriched';
 import { filterActivities, getAllActivities } from '@/lib/activities';
 import { Activity } from '@/lib/types';
 
@@ -269,6 +269,32 @@ export default function LocationPageEnriched({ location }: LocationPageEnrichedP
           </div>
         </div>
       </div>
+
+      {/* Galerie photos */}
+      {location.images && location.images.length > 0 && (
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+              <span className="text-4xl">📸</span>
+              <span>{location.name} en images</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {location.images.map((image, idx) => (
+                <div key={idx} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+                  <Image
+                    src={image}
+                    alt={`${location.name} - Photo ${idx + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* HÉBERGEMENT */}
       <div id="hebergement" className="py-16 scroll-mt-20">
@@ -790,51 +816,75 @@ export default function LocationPageEnriched({ location }: LocationPageEnrichedP
         </div>
       )}
 
-      {/* LIEUX À PROXIMITÉ */}
-      {getNearbyLocations(location.slug).length > 0 && (
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Que faire dans les environs ?
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Découvrez également ces destinations proches de {location.name}
-            </p>
+      {/* DÉCOUVRIR PLUS DE DESTINATIONS */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Lien vers la page mère */}
+          <div className="mb-12">
+            <Link
+              href="/que-faire-ile-maurice"
+              className="group block bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl p-8 text-white hover:shadow-2xl transition-all"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                    Que faire à l'Île Maurice ?
+                  </h2>
+                  <p className="text-white/90 max-w-2xl">
+                    Découvrez notre guide complet : plages, sports nautiques, randonnées, culture et toutes les activités incontournables de Maurice.
+                  </p>
+                </div>
+                <div className="hidden md:block text-5xl group-hover:translate-x-2 transition-transform">
+                  →
+                </div>
+              </div>
+            </Link>
+          </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {getNearbyLocations(location.slug).map((nearby) => (
+          {/* Toutes les autres destinations */}
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Explorer les autres destinations
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Découvrez toutes les destinations de l'Île Maurice pour planifier votre voyage
+          </p>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {getAllLocationSlugs()
+              .filter(slug => slug !== location.slug)
+              .map(slug => getLocationBySlug(slug))
+              .filter(Boolean)
+              .map((dest) => (
                 <Link
-                  key={nearby.slug}
-                  href={`/que-faire-${nearby.slug}`}
-                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all group"
+                  key={dest!.slug}
+                  href={dest!.slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${dest!.slug}`}
+                  className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all"
                 >
-                  <div className="relative h-48">
+                  <div className="relative h-32">
                     <Image
-                      src={nearby.heroImage}
-                      alt={`Que faire à ${nearby.name}`}
+                      src={dest!.heroImage}
+                      alt={`Que faire à ${dest!.name}`}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {nearby.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                      {nearby.intro}
-                    </p>
-                    <div className="text-blue-600 font-medium flex items-center gap-2">
-                      <span>Découvrir que faire</span>
-                      <span>→</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-2 left-3 right-3">
+                      <h3 className="text-white font-bold text-sm drop-shadow-lg">
+                        {dest!.name}
+                      </h3>
                     </div>
+                  </div>
+                  <div className="p-3">
+                    <p className="text-gray-600 text-xs line-clamp-2">
+                      {dest!.highlights[0]}
+                    </p>
                   </div>
                 </Link>
               ))}
-            </div>
           </div>
         </div>
-      )}
+      </div>
 
       {/* FINAL CTA */}
       <div className="bg-gradient-to-br from-blue-600 to-cyan-500 py-16">

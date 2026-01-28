@@ -10,6 +10,7 @@ import RichText from '@/components/ui/RichText';
 import WeatherCard from '@/components/ui/WeatherCard';
 import QuickNav from '@/components/ui/QuickNav';
 import StickyBookingButton from '@/components/activities/StickyBookingButton';
+import ActivityInternalLinks from '@/components/activities/ActivityInternalLinks';
 
 /**
  * Composant FusionActivityPage
@@ -290,12 +291,19 @@ export default function FusionActivityPage({ group, seo }: FusionPageProps) {
 
       {/* FAQ - SEO */}
       <section id="faq" className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
             <RichText content={generateFAQ(category, mainLocation)} />
           </div>
         </div>
       </section>
+
+      {/* Maillage interne - Activités similaires et pages mères */}
+      <ActivityInternalLinks
+        currentCategory={category}
+        currentLocation={mainLocation}
+        currentActivityIds={activities.map(a => a.id)}
+      />
 
       {/* Bouton sticky de réservation */}
       <StickyBookingButton

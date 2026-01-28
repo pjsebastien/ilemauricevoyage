@@ -5,11 +5,11 @@ import { decodeHtmlEntities } from '@/lib/utils';
 import { generateIndividualIntro, generateWhyChoose, generateFAQ, generatePricingSection, generateReviewsSection } from '@/lib/seo-content-generator';
 import { getCategoryTheme } from '@/lib/activity-colors';
 import Card from '@/components/ui/Card';
-import ActivityList from '@/components/activities/ActivityList';
 import RichText from '@/components/ui/RichText';
 import WeatherCard from '@/components/ui/WeatherCard';
 import QuickNav from '@/components/ui/QuickNav';
 import StickyBookingButton from '@/components/activities/StickyBookingButton';
+import ActivityInternalLinks from '@/components/activities/ActivityInternalLinks';
 
 /**
  * Composant IndividualActivityPage
@@ -425,35 +425,19 @@ export default function IndividualActivityPage({ activity, relatedActivities, se
 
       {/* FAQ - SEO */}
       <section id="faq" className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
             <RichText content={generateFAQ(category, mainLocation)} />
           </div>
         </div>
       </section>
 
-      {/* Activités similaires */}
-      {relatedActivities && relatedActivities.length > 0 && (
-        <section className="py-12 md:py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Autres activités {category.toLowerCase()}
-              </h2>
-              <p className="text-lg text-gray-600">
-                Découvrez d'autres expériences dans la même catégorie
-              </p>
-            </div>
-            <div className="mb-24">
-              <ActivityList
-                activities={relatedActivities}
-                variant="compact"
-                columns={4}
-              />
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Maillage interne - Activités similaires et pages mères */}
+      <ActivityInternalLinks
+        currentCategory={category}
+        currentLocation={mainLocation}
+        currentActivityIds={[activity.id]}
+      />
 
       {/* Bouton sticky de réservation */}
       <StickyBookingButton

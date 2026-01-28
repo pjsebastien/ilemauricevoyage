@@ -324,8 +324,18 @@ const getLocationsByRegion = (slugs: string[]) => {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/que-faire-gorges-riviere-noire" className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
-              <div className="h-48 bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center">
-                <span className="text-6xl">🌿</span>
+              <div className="relative h-48">
+                <Image
+                  src="/photos villes ilemaurice/gorge rivière noire ile maurice.jpg"
+                  alt="Parc National des Gorges de Rivière Noire - Île Maurice"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute top-4 left-4 bg-green-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  🌿 Parc National
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Parc National des Gorges de Rivière Noire</h3>
@@ -335,8 +345,18 @@ const getLocationsByRegion = (slugs: string[]) => {
             </Link>
 
             <Link href="/que-faire-chutes-tamarin" className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
-              <div className="h-48 bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
-                <span className="text-6xl">💧</span>
+              <div className="relative h-48">
+                <Image
+                  src="/photos villes ilemaurice/chutes de tamarin ile maurice.jpg"
+                  alt="Chutes de Tamarin 7 Cascades - Île Maurice"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute top-4 left-4 bg-blue-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  💧 Aventure
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Chutes de Tamarin (7 Cascades)</h3>

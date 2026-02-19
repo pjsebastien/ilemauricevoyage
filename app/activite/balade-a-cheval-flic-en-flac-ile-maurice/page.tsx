@@ -150,6 +150,7 @@ const group = {
 const seo = generateActivityPageSEO(group);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/balade-a-cheval-flic-en-flac-ile-maurice' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

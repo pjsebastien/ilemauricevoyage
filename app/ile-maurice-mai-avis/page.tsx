@@ -3,6 +3,7 @@ import { mayData } from '@/lib/all-months-data';
 import MonthlyPage from '@/components/monthly/MonthlyPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ile-maurice-mai-avis' },
   title: mayData.metaTitle,
   description: mayData.metaDescription,
   openGraph: {

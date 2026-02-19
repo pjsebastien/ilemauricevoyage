@@ -5,6 +5,7 @@ import QuandPartirTool from '@/components/QuandPartirTool';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/quand-partir-ile-maurice' },
   title: 'Quand partir à l\'Île Maurice ? Météo, budget et meilleures périodes',
   description: 'Découvrez le meilleur moment pour partir à l\'Île Maurice : météo, budget, activités. Calendrier des 12 mois avec conseils et outil de recommandation personnalisé.',
   openGraph: {

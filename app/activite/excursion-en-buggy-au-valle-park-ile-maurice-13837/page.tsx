@@ -88,6 +88,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/excursion-en-buggy-au-valle-park-ile-maurice-13837' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

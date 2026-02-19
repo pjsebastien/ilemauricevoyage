@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/mentions-legales' },
   title: 'Mentions légales - Île Maurice Voyage',
   description: 'Mentions légales du site Île Maurice Voyage. Informations sur l\'éditeur, l\'hébergeur et les conditions d\'utilisation.',
 };

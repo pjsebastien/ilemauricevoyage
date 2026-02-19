@@ -7,6 +7,7 @@ const slug = 'trou-aux-biches';
 const locationData = getLocationBySlug(slug)!;
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/que-faire-trou-aux-biches' },
   title: `Que faire à ${locationData.name} en ${locationData.bestMonths.map(m => m.charAt(0).toUpperCase() + m.slice(1)).join(', ')} ?`,
   description: `${locationData.name} : ${locationData.intro.substring(0, 140)}... Meilleurs mois : ${locationData.bestMonths.join(', ')}.`,
   openGraph: {

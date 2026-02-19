@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/itineraires-ile-maurice' },
   title: 'Itinéraires île Maurice : 7, 10 ou 14 jours (circuit jour par jour)',
   description: 'Nos itinéraires détaillés pour visiter Maurice : circuit 7 jours, 10 jours, 14 jours. Programme jour par jour, hébergements, activités. Construisez votre road trip parfait.',
 

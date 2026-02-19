@@ -284,6 +284,7 @@ const group = {
 const seo = generateActivityPageSEO(group);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/observation-des-cetaces-flic-en-flac-ile-maurice' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

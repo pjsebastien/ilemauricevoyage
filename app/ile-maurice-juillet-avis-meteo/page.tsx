@@ -3,6 +3,7 @@ import { julyData } from '@/lib/all-months-data';
 import MonthlyPage from '@/components/monthly/MonthlyPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ile-maurice-juillet-avis-meteo' },
   title: julyData.metaTitle,
   description: julyData.metaDescription,
   openGraph: {

@@ -89,6 +89,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/excursion-seabob-a-grand-baie-a-lile-maurice-4845' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

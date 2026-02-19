@@ -48,6 +48,7 @@ export async function generateMetadata({
   const seoContent = getCategorySEO(categoryName);
 
   return {
+    alternates: { canonical: `/${params.category}` },
     title: seoContent.title,
     description: seoContent.description,
     keywords: seoContent.keywords,

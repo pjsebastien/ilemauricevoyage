@@ -89,6 +89,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/initiation-canyoning-aux-7-cascades-de-tamarin-sur-lile-maurice-8123' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

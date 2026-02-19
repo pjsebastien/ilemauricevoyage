@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/infos-pratiques-ile-maurice' },
   title: 'Infos pratiques île Maurice : visa, santé, argent, téléphone',
   description: 'Tout savoir avant de partir à Maurice : visa, vaccins, carte SIM, location voiture, sécurité, électricité, décalage horaire. Le guide pratique complet.',
 

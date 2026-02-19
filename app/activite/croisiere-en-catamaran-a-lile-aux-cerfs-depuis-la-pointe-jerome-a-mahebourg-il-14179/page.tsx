@@ -89,6 +89,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/croisiere-en-catamaran-a-lile-aux-cerfs-depuis-la-pointe-jerome-a-mahebourg-il-14179' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

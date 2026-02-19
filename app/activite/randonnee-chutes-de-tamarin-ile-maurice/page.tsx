@@ -512,6 +512,7 @@ const group = {
 const seo = generateActivityPageSEO(group);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/randonnee-chutes-de-tamarin-ile-maurice' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

@@ -3,6 +3,7 @@ import { novemberData } from '@/lib/all-months-data';
 import MonthlyPage from '@/components/monthly/MonthlyPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ile-maurice-novembre-avis-meteo' },
   title: novemberData.metaTitle,
   description: novemberData.metaDescription,
   openGraph: {

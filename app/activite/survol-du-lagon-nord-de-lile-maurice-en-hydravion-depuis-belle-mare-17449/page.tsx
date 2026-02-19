@@ -89,6 +89,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/survol-du-lagon-nord-de-lile-maurice-en-hydravion-depuis-belle-mare-17449' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

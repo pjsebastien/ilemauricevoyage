@@ -121,6 +121,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/excursion-a-vtt-a-chamouny-dans-le-bike-park-naturel-mobike-ile-maurice-25539' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

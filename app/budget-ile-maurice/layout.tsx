@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/budget-ile-maurice' },
   title: 'Budget voyage île Maurice : combien prévoir ? Prix et calcul',
   description: 'Calculez votre budget pour Maurice : vols, hôtels, repas, activités. Prix détaillés pour 1 semaine, 2 semaines. Tous les coûts par destination et conseils pour économiser.',
 

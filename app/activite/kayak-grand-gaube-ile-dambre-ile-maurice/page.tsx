@@ -148,6 +148,7 @@ const group = {
 const seo = generateActivityPageSEO(group);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/kayak-grand-gaube-ile-dambre-ile-maurice' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

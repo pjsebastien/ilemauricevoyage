@@ -7,6 +7,7 @@ import type { LocationDataEnriched } from '@/lib/locations-data-enriched';
 
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/que-faire-ile-maurice' },
   title: 'Que faire à l\'Île Maurice ? Activités incontournables et destinations',
   description: 'Découvrez que faire à l\'Île Maurice : plages paradisiaques, plongée, kitesurf, randonnées, culture créole. Notre sélection des meilleures activités et lieux par région.',
   openGraph: {

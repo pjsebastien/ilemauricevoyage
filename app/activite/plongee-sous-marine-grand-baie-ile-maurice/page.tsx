@@ -216,6 +216,7 @@ const group = {
 const seo = generateActivityPageSEO(group);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/plongee-sous-marine-grand-baie-ile-maurice' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

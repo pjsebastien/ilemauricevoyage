@@ -88,6 +88,7 @@ const relatedActivities = getAllActivities()
   .slice(0, 4);
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activite/excursion-en-kayak-de-mer-a-lile-aux-benitiers-ile-maurice-18022' },
   title: seo.title,
   description: seo.metaDescription,
   keywords: seo.relatedKeywords.join(', '),

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/politique-de-confidentialite' },
   title: 'Politique de confidentialité - Île Maurice Voyage',
   description: 'Politique de confidentialité du site Île Maurice Voyage. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.',
 };

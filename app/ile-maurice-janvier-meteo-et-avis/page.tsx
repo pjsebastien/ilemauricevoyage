@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { januaryData } from '@/lib/monthly-data';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ile-maurice-janvier-meteo-et-avis' },
   title: januaryData.metaTitle,
   description: januaryData.metaDescription,
   openGraph: {

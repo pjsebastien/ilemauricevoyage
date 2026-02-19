@@ -7,6 +7,7 @@ const slug = 'ile-aux-cerfs';
 const locationData = getLocationBySlug(slug)!;
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/que-faire-ile-aux-cerfs' },
   title: `Que faire à l'${locationData.name} en ${locationData.bestMonths.map(m => m.charAt(0).toUpperCase() + m.slice(1)).join(', ')} ?`,
   description: `${locationData.name} : ${locationData.intro.substring(0, 140)}... Meilleurs mois : ${locationData.bestMonths.join(', ')}.`,
   openGraph: {

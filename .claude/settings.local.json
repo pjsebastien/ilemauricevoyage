@@ -28,7 +28,8 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAjout maillage interne + photos destinations\n\n- Ajout composant ActivityInternalLinks pour maillage pages activités\n- Intégration maillage dans FusionActivityPage et IndividualActivityPage\n- Ajout photos destinations dans pages ou-aller, itineraires, que-faire\n- Ajout galerie photos dans LocationPageEnriched\n- Mise à jour locations-data-enriched avec images\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git push)",
       "WebFetch(domain:www.ilemauricevoyage.fr)",
-      "Bash(node fix-og-image.js:*)"
+      "Bash(node fix-og-image.js:*)",
+      "Bash(node fix-canonicals.js:*)"
     ]
   }
 }

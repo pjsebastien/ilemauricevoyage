@@ -3,6 +3,7 @@ import { septemberData } from '@/lib/all-months-data';
 import MonthlyPage from '@/components/monthly/MonthlyPage';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ile-maurice-septembre-avis' },
   title: septemberData.metaTitle,
   description: septemberData.metaDescription,
   openGraph: {

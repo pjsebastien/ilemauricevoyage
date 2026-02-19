@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ou-aller-ile-maurice' },
   title: 'Où aller à Maurice ? Tous les spots pour un voyage réussi !',
   description: 'Découvrez où partir à Maurice : 16 destinations comparées (plages, nature, culture). Grand Baie, Le Morne, Blue Bay, Rodrigues... Le dossier complet pour choisir votre destination idéale.',
 

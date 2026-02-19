@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/activites-ile-maurice' },
   title: 'Activités île Maurice : +40 expériences à réserver',
   description: 'Découvrez les meilleures activités à l\'île Maurice : plongée, catamaran, dauphins, randonnée, kitesurf, quad, canyoning. Réservez en ligne les expériences incontournables.',
   openGraph: {

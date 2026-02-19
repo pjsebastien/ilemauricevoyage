@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Où aller à Maurice ? Tous les spots pour un voyage réussi !',
   description: 'Découvrez où partir à Maurice : 16 destinations comparées (plages, nature, culture). Grand Baie, Le Morne, Blue Bay, Rodrigues... Le dossier complet pour choisir votre destination idéale.',
-  keywords: 'où aller à Maurice, où partir à Maurice, destinations Maurice, voyage Maurice, plages Maurice, régions Maurice',
+
   openGraph: {
     title: 'Où aller à Maurice ? Vue d’ensemble des destinations',
     description: 'Comparez toutes les destinations de l\'île Maurice : plages paradisiaques, montagnes, culture. Trouvez le spot parfait pour votre voyage.',
@@ -106,22 +107,22 @@ const Icons = {
 
 // Images des destinations
 const destinationImages: Record<string, string> = {
-  'grand-baie': '/photos villes ilemaurice/grand baie ile maurice.jpg',
-  'cap-malheureux': '/photos villes ilemaurice/cap malheureux ile maurice.jpg',
-  'trou-aux-biches': '/photos villes ilemaurice/trou aux biches ile maurice.jpg',
-  'grand-gaube': '/photos villes ilemaurice/grand gaube ile maurice.jpg',
-  'belle-mare': '/photos villes ilemaurice/belle mare ile maurice.jpg',
-  'trou-deau-douce': "/photos villes ilemaurice/trou d'eau douce ile maurice.jpg",
-  'ile-aux-cerfs': '/photos villes ilemaurice/ile aux cerfs ile maurice.jpg',
-  'blue-bay': '/photos villes ilemaurice/blue bay ile maurice.jpg',
-  'le-morne': '/photos villes ilemaurice/le morne ile maurice.jpg',
-  'souillac': '/photos villes ilemaurice/souillac ile maurice.jpg',
-  'flic-en-flac': '/photos villes ilemaurice/flic en flac ile maurice.jpg',
-  'tamarin': '/photos villes ilemaurice/baie tamarin ile maurice.jpg',
-  'port-louis': '/photos villes ilemaurice/port louis ile maurice.jpg',
-  'chamouny': '/photos villes ilemaurice/chamouny ile maurice.jpg',
-  'chutes-tamarin': '/photos villes ilemaurice/chutes de tamarin ile maurice.jpg',
-  'gorges-riviere-noire': '/photos villes ilemaurice/gorge rivière noire ile maurice.jpg',
+  'grand-baie': '/photos-villes-ilemaurice/grand-baie-ile-maurice.jpg',
+  'cap-malheureux': '/photos-villes-ilemaurice/cap-malheureux-ile-maurice.jpg',
+  'trou-aux-biches': '/photos-villes-ilemaurice/trou-aux-biches-ile-maurice.jpg',
+  'grand-gaube': '/photos-villes-ilemaurice/grand-gaube-ile-maurice.jpg',
+  'belle-mare': '/photos-villes-ilemaurice/belle-mare-ile-maurice.jpg',
+  'trou-deau-douce': '/photos-villes-ilemaurice/trou-deau-douce-ile-maurice.jpg',
+  'ile-aux-cerfs': '/photos-villes-ilemaurice/ile-aux-cerfs-ile-maurice.jpg',
+  'blue-bay': '/photos-villes-ilemaurice/blue-bay-ile-maurice.jpg',
+  'le-morne': '/photos-villes-ilemaurice/le-morne-ile-maurice.jpg',
+  'souillac': '/photos-villes-ilemaurice/souillac-ile-maurice.jpg',
+  'flic-en-flac': '/photos-villes-ilemaurice/flic-en-flac-ile-maurice.jpg',
+  'tamarin': '/photos-villes-ilemaurice/baie-tamarin-ile-maurice.jpg',
+  'port-louis': '/photos-villes-ilemaurice/port-louis-ile-maurice.jpg',
+  'chamouny': '/photos-villes-ilemaurice/chamouny-ile-maurice.jpg',
+  'chutes-tamarin': '/photos-villes-ilemaurice/chutes-de-tamarin-ile-maurice.jpg',
+  'gorges-riviere-noire': '/photos-villes-ilemaurice/gorge-riviere-noire-ile-maurice.jpg',
 };
 
 // Données des destinations organisées par région
@@ -370,7 +371,7 @@ const bonusDestinations = [
 function ActivityCTA({ location, className = '' }: { location: string; className?: string }) {
   return (
     <Link
-      href={`/activities?location=${location}`}
+      href="/activites-ile-maurice"
       className={`inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all shadow-md hover:shadow-lg ${className}`}
     >
       <Icons.Sparkles className="w-4 h-4" />
@@ -506,6 +507,8 @@ export default function OuAllerMauricePage() {
           </div>
         </div>
       </section>
+
+      <Breadcrumbs items={[{ label: 'Où aller à l\'île Maurice' }]} />
 
       {/* Table des matières */}
       <section className="bg-white border-b sticky top-0 z-40 shadow-sm">

@@ -3,100 +3,35 @@ import { MetadataRoute } from 'next';
 const baseUrl = 'https://www.ilemauricevoyage.fr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date().toISOString();
+  // Date fixe de dernière mise à jour réelle du contenu
+  const lastUpdate = '2026-02-19T00:00:00.000Z';
 
   // Pages principales (priorité haute)
   const mainPages = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/que-faire-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ou-aller-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/activites-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/itineraires-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/budget-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/quand-partir-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/infos-pratiques-ile-maurice`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/mentions-legales`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.2,
-    },
-    {
-      url: `${baseUrl}/politique-de-confidentialite`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.2,
-    },
+    { url: baseUrl, lastModified: lastUpdate, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${baseUrl}/que-faire-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/ou-aller-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/activites-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/itineraires-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/budget-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/quand-partir-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/infos-pratiques-ile-maurice`, lastModified: lastUpdate, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/contact`, lastModified: lastUpdate, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/mentions-legales`, lastModified: lastUpdate, changeFrequency: 'yearly' as const, priority: 0.2 },
+    { url: `${baseUrl}/politique-de-confidentialite`, lastModified: lastUpdate, changeFrequency: 'yearly' as const, priority: 0.2 },
   ];
 
   // Pages destinations "Que faire à..."
   const destinations = [
-    'flic-en-flac',
-    'le-morne',
-    'ile-aux-cerfs',
-    'belle-mare',
-    'trou-aux-biches',
-    'grand-baie',
-    'tamarin',
-    'cap-malheureux',
-    'trou-deau-douce',
-    'port-louis',
-    'souillac',
-    'grand-gaube',
-    'chamouny',
-    'chutes-tamarin',
-    'gorges-riviere-noire',
+    'flic-en-flac', 'le-morne', 'ile-aux-cerfs', 'belle-mare',
+    'trou-aux-biches', 'grand-baie', 'tamarin', 'cap-malheureux',
+    'trou-deau-douce', 'port-louis', 'souillac', 'grand-gaube',
+    'chamouny', 'chutes-tamarin', 'gorges-riviere-noire',
   ];
 
   const destinationPages = destinations.map((dest) => ({
     url: `${baseUrl}/que-faire-${dest}`,
-    lastModified: currentDate,
+    lastModified: lastUpdate,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
@@ -104,12 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Page Blue Bay avec URL spécifique
   destinationPages.push({
     url: `${baseUrl}/blue-bay-ile-maurice`,
-    lastModified: currentDate,
+    lastModified: lastUpdate,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   });
 
-  // Pages mois avec URLs anciennes conservées
+  // Pages mois
   const monthUrls = [
     'ile-maurice-janvier-meteo-et-avis',
     'ile-maurice-fevrier-avis-meteo',
@@ -127,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const monthPages = monthUrls.map((monthUrl) => ({
     url: `${baseUrl}/${monthUrl}`,
-    lastModified: currentDate,
+    lastModified: lastUpdate,
     changeFrequency: 'yearly' as const,
     priority: 0.7,
   }));
@@ -180,26 +115,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const activityPages = activities.map((activity) => ({
     url: `${baseUrl}/activite/${activity}`,
-    lastModified: currentDate,
+    lastModified: lastUpdate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
 
   // Pages catégories d'activités
   const categories = [
-    'sports-nautiques',
-    'nature-randonnee',
-    'aventure',
-    'culture-patrimoine',
-    'detente-bien-etre',
-    'gastronomie',
-    'famille',
-    'romantique',
+    'sports-nautiques', 'nature-randonnee', 'aventure',
+    'culture-patrimoine', 'detente-bien-etre', 'gastronomie',
+    'famille', 'romantique',
   ];
 
   const categoryPages = categories.map((category) => ({
     url: `${baseUrl}/${category}`,
-    lastModified: currentDate,
+    lastModified: lastUpdate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));

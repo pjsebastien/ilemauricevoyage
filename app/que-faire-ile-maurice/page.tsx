@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { getAllLocationSlugs, getLocationBySlug } from '@/lib/locations-data-enriched';
 import type { LocationDataEnriched } from '@/lib/locations-data-enriched';
 
@@ -90,11 +91,6 @@ const getLocationsByRegion = (slugs: string[]) => {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <nav className="text-sm text-white/90 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
-            <span className="mx-2">/</span>
-            <span className="font-medium">Que faire à l'Île Maurice</span>
-          </nav>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Que faire à l'Île Maurice ?
@@ -123,6 +119,8 @@ const getLocationsByRegion = (slugs: string[]) => {
           </div>
         </div>
       </div>
+
+      <Breadcrumbs items={[{ label: 'Que faire à l\'île Maurice' }]} />
 
       {/* Table des matières */}
       <div className="bg-blue-50 py-8">
@@ -326,7 +324,7 @@ const getLocationsByRegion = (slugs: string[]) => {
             <Link href="/que-faire-gorges-riviere-noire" className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
               <div className="relative h-48">
                 <Image
-                  src="/photos villes ilemaurice/gorge rivière noire ile maurice.jpg"
+                  src="/photos-villes-ilemaurice/gorge-riviere-noire-ile-maurice.jpg"
                   alt="Parc National des Gorges de Rivière Noire - Île Maurice"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -347,7 +345,7 @@ const getLocationsByRegion = (slugs: string[]) => {
             <Link href="/que-faire-chutes-tamarin" className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
               <div className="relative h-48">
                 <Image
-                  src="/photos villes ilemaurice/chutes de tamarin ile maurice.jpg"
+                  src="/photos-villes-ilemaurice/chutes-de-tamarin-ile-maurice.jpg"
                   alt="Chutes de Tamarin 7 Cascades - Île Maurice"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

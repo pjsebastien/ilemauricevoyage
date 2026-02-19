@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import QuandPartirTool from '@/components/QuandPartirTool';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Quand partir à l\'Île Maurice ? Météo, budget et meilleures périodes',
@@ -76,12 +77,6 @@ export default function QuandPartirPage() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Breadcrumb */}
-          <nav className="text-sm text-white/90 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
-            <span className="mx-2">/</span>
-            <span className="font-medium">Quand partir à l'Île Maurice</span>
-          </nav>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Quand partir à l'Île Maurice ?
@@ -91,6 +86,8 @@ export default function QuandPartirPage() {
           </p>
         </div>
       </div>
+
+      <Breadcrumbs items={[{ label: 'Quand partir à l\'île Maurice' }]} />
 
       {/* Interactive Tool */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

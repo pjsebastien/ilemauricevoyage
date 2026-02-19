@@ -7,30 +7,16 @@ import CookieBanner from '@/components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// URL canonique unique pour tout le site
 const siteUrl = 'https://www.ilemauricevoyage.fr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: '/',
-  },
   title: {
     default: 'Voyage île Maurice : le guide pour organiser votre séjour',
     template: '%s | Île Maurice Voyage',
   },
   description:
     'Organisez votre voyage à l\'île Maurice étape par étape. Destinations, budget, itinéraires, activités, quand partir et infos pratiques. Le guide ultime pour préparer votre séjour de rêve.',
-  keywords: [
-    'voyage ile maurice',
-    'organiser voyage maurice',
-    'séjour ile maurice',
-    'vacances maurice',
-    'partir ile maurice',
-    'guide voyage maurice',
-    'activités île maurice',
-    'excursions île maurice',
-  ],
   openGraph: {
     title: 'Voyage île Maurice : organisez votre séjour de rêve',
     description: 'Destinations, budget, itinéraires, activités... Le guide étape par étape pour préparer votre voyage à Maurice.',
@@ -38,11 +24,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_FR',
     siteName: 'Île Maurice Voyage',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Voyage île Maurice - Guide complet pour organiser votre séjour',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Voyage île Maurice : le guide complet',
     description: 'Organisez votre séjour à Maurice : destinations, budget, itinéraires et activités.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,

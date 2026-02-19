@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Section from '@/components/layout/Section';
 import PageHero from '@/components/layout/PageHero';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import ActivityList from '@/components/activities/ActivityList';
 import CategoryGrid from '@/components/activities/CategoryGrid';
 import {
@@ -78,6 +79,8 @@ export default function ActivitiesPage() {
           },
         ]}
       />
+
+      <Breadcrumbs items={[{ label: 'Activités île Maurice' }]} />
 
       {/* Barre de recherche et filtres rapides */}
       <Section background="white" spacing="md">

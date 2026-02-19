@@ -29,7 +29,8 @@
       "Bash(git push)",
       "WebFetch(domain:www.ilemauricevoyage.fr)",
       "Bash(node fix-og-image.js:*)",
-      "Bash(node fix-canonicals.js:*)"
+      "Bash(node fix-canonicals.js:*)",
+      "Bash(node fix-titles.js:*)"
     ]
   }
 }

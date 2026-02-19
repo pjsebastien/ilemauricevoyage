@@ -8,8 +8,8 @@ const locationData = getLocationBySlug(slug)!;
 
 export const metadata: Metadata = {
   alternates: { canonical: '/que-faire-chamouny' },
-  title: `Que faire à ${locationData.name} en ${locationData.bestMonths.map(m => m.charAt(0).toUpperCase() + m.slice(1)).join(', ')} ?`,
-  description: `${locationData.name} : ${locationData.intro.substring(0, 140)}... Meilleurs mois : ${locationData.bestMonths.join(', ')}.`,
+  title: `Que faire à ${locationData.name} : activités, plages et excursions`,
+  description: locationData.metaDescription,
   openGraph: {
     title: `Que faire à ${locationData.name} ? Randonnées, parc national, nature`,
     description: locationData.metaDescription,

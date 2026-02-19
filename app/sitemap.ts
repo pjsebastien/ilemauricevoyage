@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getCategorySlugs } from '@/lib/activities';
 
 const baseUrl = 'https://www.ilemauricevoyage.fr';
 
@@ -120,15 +121,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Pages catégories d'activités
-  const categories = [
-    'sports-nautiques', 'nature-randonnee', 'aventure',
-    'culture-patrimoine', 'detente-bien-etre', 'gastronomie',
-    'famille', 'romantique',
-  ];
-
-  const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/${category}`,
+  // Pages catégories d'activités (slugs générés dynamiquement)
+  const categoryPages = getCategorySlugs().map(({ slug }) => ({
+    url: `${baseUrl}/${slug}`,
     lastModified: lastUpdate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,

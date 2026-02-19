@@ -56,6 +56,7 @@ export async function generateMetadata({
       description: seoContent.description,
       type: 'website',
       locale: 'fr_FR',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
     },
   };
 }

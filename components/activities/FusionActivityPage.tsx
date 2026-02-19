@@ -5,6 +5,7 @@ import { FusionPageProps, extractActivityEssentials, requiresSwimming } from '@/
 import { decodeHtmlEntities, truncate } from '@/lib/utils';
 import { generateFusionIntro, generateWhatToExpect, generatePracticalAdvice, generateFAQ } from '@/lib/seo-content-generator';
 import { getCategoryTheme } from '@/lib/activity-colors';
+import { categoryToSlug } from '@/lib/activities';
 import Card from '@/components/ui/Card';
 import RichText from '@/components/ui/RichText';
 import WeatherCard from '@/components/ui/WeatherCard';
@@ -66,7 +67,7 @@ export default function FusionActivityPage({ group, seo }: FusionPageProps) {
               <span className="mx-2">›</span>
               <Link href="/activites-ile-maurice" className="hover:text-white transition">Activités</Link>
               <span className="mx-2">›</span>
-              <Link href={`/${category.toLowerCase().replace(/\s+/g, '-')}-ile-maurice`} className="hover:text-white transition">
+              <Link href={`/${categoryToSlug(category)}`} className="hover:text-white transition">
                 {category}
               </Link>
               <span className="mx-2">›</span>

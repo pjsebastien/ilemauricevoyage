@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: 'Que faire à l\'Île Maurice ? Les incontournables à voir et à faire',
     description: 'Plages de rêve, sports nautiques, randonnées spectaculaires, culture créole : explorez toutes les activités et destinations de Maurice avec nos conseils.',
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Quand partir à l\'Île Maurice ? Météo et meilleures périodes',
     description: 'Trouvez le meilleur mois pour votre voyage selon la météo, le budget et vos activités préférées avec notre calendrier détaillé.',
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 

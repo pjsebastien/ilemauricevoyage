@@ -611,6 +611,6 @@ Janvier à l'Île Maurice est un **mois contrasté** qui plaira aux vacanciers f
 Consultez nos guides détaillés :
 - [Toutes nos activités à l'Île Maurice](/activites-ile-maurice)
 - [Dossier complet Quand partir à Maurice](/quand-partir-ile-maurice)
-- [Les plus belles plages de l'île](/plages-ile-maurice)
+- [Les plus belles plages de l'île](/ou-aller-ile-maurice)
 
 Bon voyage sous le soleil mauricien ! 🌴☀️

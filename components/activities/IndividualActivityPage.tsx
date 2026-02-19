@@ -4,6 +4,7 @@ import { ActivityPageProps, extractActivityEssentials, requiresSwimming } from '
 import { decodeHtmlEntities } from '@/lib/utils';
 import { generateIndividualIntro, generateWhyChoose, generateFAQ, generatePricingSection, generateReviewsSection } from '@/lib/seo-content-generator';
 import { getCategoryTheme } from '@/lib/activity-colors';
+import { categoryToSlug } from '@/lib/activities';
 import Card from '@/components/ui/Card';
 import RichText from '@/components/ui/RichText';
 import WeatherCard from '@/components/ui/WeatherCard';
@@ -46,7 +47,7 @@ export default function IndividualActivityPage({ activity, relatedActivities, se
               <span className="mx-2">›</span>
               <Link href="/activites-ile-maurice" className="hover:text-white transition">Activités</Link>
               <span className="mx-2">›</span>
-              <Link href={`/${category.toLowerCase().replace(/\s+/g, '-')}-ile-maurice`} className="hover:text-white transition">
+              <Link href={`/${categoryToSlug(category)}`} className="hover:text-white transition">
                 {category}
               </Link>
               <span className="mx-2">›</span>

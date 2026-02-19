@@ -526,7 +526,7 @@ export const aprilData: MonthData = {
     {
       title: 'Randonnée Le Morne Brabant',
       why: 'Conditions parfaites : température idéale, sentiers secs, vue dégagée. Site UNESCO à ne pas manquer.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '⛰️'
     },
     {
@@ -749,7 +749,7 @@ export const mayData: MonthData = {
     {
       title: 'Randonnée Le Pouce (812m)',
       why: 'Conditions parfaites : frais le matin, sentiers secs, vue panoramique sur tout le nord. 3h A/R.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🥾'
     },
     {
@@ -980,7 +980,7 @@ export const juneData: MonthData = {
     {
       title: 'Randonnée Gorges Rivière Noire',
       why: 'Température idéale pour marcher, sentiers en excellent état, cascades accessibles. 15km de nature préservée.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🥾'
     },
     {
@@ -1225,7 +1225,7 @@ export const julyData: MonthData = {
     {
       title: 'Randonnée Le Morne Brabant (UNESCO)',
       why: 'Température fraîche idéale pour l\'ascension. Vue à 360° époustouflante. Départ tôt conseillé.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '⛰️'
     },
     {
@@ -1460,7 +1460,7 @@ export const augustData: MonthData = {
     {
       title: 'Randonnée matinale Montagne du Lion',
       why: 'Partez à 6h pour éviter les groupes. Température fraîche, vue spectaculaire, 2h30 A/R.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🌄'
     },
     {
@@ -1687,7 +1687,7 @@ export const septemberData: MonthData = {
     {
       title: 'Randonnée Pieter Both (823m)',
       why: 'Température idéale pour ascension technique. Vue panoramique. Moins fréquenté qu\'en haute saison.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🏔️'
     },
     {
@@ -1919,7 +1919,7 @@ export const octoberData: MonthData = {
     {
       title: 'Randonnée Gorges de la Rivière Noire',
       why: 'Température parfaite (pas trop chaud), nature en fleurs, cascades accessibles, oiseaux endémiques.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🦜'
     },
     {
@@ -2152,7 +2152,7 @@ export const novemberData: MonthData = {
     {
       title: 'Randonnée matinale Le Pouce',
       why: 'Partez tôt (6h) pour éviter chaleur. Vue panoramique, 3h A/R, tous niveaux.',
-      link: '/randonnees-ile-maurice',
+      link: '/randonnee-ile-maurice',
       icon: '🌅'
     },
     {
@@ -2383,7 +2383,7 @@ export const decemberData: MonthData = {
     {
       title: 'Baignade et farniente plage',
       why: 'Eau à 27°C parfaite, température chaude, activité principale. Privilégiez tôt matin ou fin après-midi.',
-      link: '/plages-ile-maurice',
+      link: '/ou-aller-ile-maurice',
       icon: '🏖️'
     },
     {
@@ -2413,7 +2413,7 @@ export const decemberData: MonthData = {
     {
       title: 'Restaurants gastronomiques',
       why: 'Expérience culinaire haut de gamme, cuisines du monde. Réservez semaines à l\'avance pour 24 et 31 déc.',
-      link: '/gastronomie-ile-maurice',
+      link: '/que-faire-ile-maurice',
       icon: '🍽️'
     },
     {
@@ -2425,7 +2425,7 @@ export const decemberData: MonthData = {
     {
       title: 'Soirées festives et clubbing',
       why: 'Ambiance Noël/Nouvel An tropicale. Beach clubs, bars, discothèques. Grand Baie = épicentre.',
-      link: '/vie-nocturne-ile-maurice',
+      link: '/que-faire-ile-maurice',
       icon: '🎉'
     },
     {

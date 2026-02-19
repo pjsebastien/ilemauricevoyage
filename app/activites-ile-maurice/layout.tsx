@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     title: 'Activités île Maurice : les meilleures expériences à réserver',
     description: 'Plongée, catamaran, dauphins, randonnée, kitesurf... +40 activités à réserver pour votre voyage à Maurice.',
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 

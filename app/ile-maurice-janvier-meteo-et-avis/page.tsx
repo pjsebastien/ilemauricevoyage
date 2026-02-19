@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: januaryData.metaTitle,
     description: januaryData.metaDescription,
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 

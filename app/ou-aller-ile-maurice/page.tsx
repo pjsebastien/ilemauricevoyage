@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Où aller à Maurice ? Vue d’ensemble des destinations',
     description: 'Comparez toutes les destinations de l\'île Maurice : plages paradisiaques, montagnes, culture. Trouvez le spot parfait pour votre voyage.',
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 
@@ -468,7 +469,7 @@ function DestinationCard({ dest }: { dest: typeof destinations.nord[0] }) {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href={`/que-faire-${dest.slug}`}
+            href={dest.slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${dest.slug}`}
             className="flex-1 text-center bg-gray-900 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-gray-800 transition-colors"
           >
             Le guide pas à pas
@@ -868,7 +869,7 @@ export default function OuAllerMauricePage() {
                 ].map((row, index) => (
                   <tr key={index} className="hover:bg-gray-50">
                     <td className="px-4 py-3">
-                      <Link href={`/que-faire-${row.slug}`} className="font-medium text-cyan-600 hover:text-cyan-700">
+                      <Link href={row.slug === 'blue-bay' ? '/blue-bay-ile-maurice' : `/que-faire-${row.slug}`} className="font-medium text-cyan-600 hover:text-cyan-700">
                         {row.name}
                       </Link>
                     </td>

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: `Que faire à ${locationData.name} ? Resorts luxe, plages, golf`,
     description: locationData.metaDescription,
     type: 'article',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Île Maurice Voyage' }],
   },
 };
 
